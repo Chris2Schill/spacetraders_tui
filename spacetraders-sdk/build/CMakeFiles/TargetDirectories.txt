@@ -1,0 +1,7 @@
+/root/test/cpprest/spacetraders-sdk/build/CMakeFiles/CppRestOpenAPIClient.dir
+/root/test/cpprest/spacetraders-sdk/build/CMakeFiles/edit_cache.dir
+/root/test/cpprest/spacetraders-sdk/build/CMakeFiles/rebuild_cache.dir
+/root/test/cpprest/spacetraders-sdk/build/CMakeFiles/list_install_components.dir
+/root/test/cpprest/spacetraders-sdk/build/CMakeFiles/install.dir
+/root/test/cpprest/spacetraders-sdk/build/CMakeFiles/install/local.dir
+/root/test/cpprest/spacetraders-sdk/build/CMakeFiles/install/strip.dir

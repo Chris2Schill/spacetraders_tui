@@ -1,0 +1,907 @@
+[
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/ApiClient.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/ApiClient.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/ApiClient.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/ApiConfiguration.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/ApiConfiguration.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/ApiConfiguration.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/ApiException.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/ApiException.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/ApiException.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/HttpContent.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/HttpContent.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/HttpContent.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/JsonBody.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/JsonBody.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/JsonBody.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/ModelBase.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/ModelBase.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/ModelBase.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/MultipartFormData.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/MultipartFormData.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/MultipartFormData.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/Object.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/Object.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/Object.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/api/AgentsApi.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/api/AgentsApi.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/api/AgentsApi.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/api/ContractsApi.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/api/ContractsApi.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/api/ContractsApi.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/api/DefaultApi.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/api/DefaultApi.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/api/DefaultApi.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/api/FactionsApi.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/api/FactionsApi.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/api/FactionsApi.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/api/FleetApi.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/api/FleetApi.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/api/FleetApi.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/api/SystemsApi.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/api/SystemsApi.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/api/SystemsApi.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Accept_contract_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Accept_contract_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Accept_contract_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Accept_contract_200_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Accept_contract_200_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Accept_contract_200_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ActivityLevel.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ActivityLevel.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ActivityLevel.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Agent.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Agent.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Agent.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Chart.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Chart.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Chart.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Construction.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Construction.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Construction.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ConstructionMaterial.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ConstructionMaterial.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ConstructionMaterial.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Contract.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Contract.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Contract.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ContractDeliverGood.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ContractDeliverGood.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ContractDeliverGood.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ContractPayment.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ContractPayment.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ContractPayment.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ContractTerms.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ContractTerms.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ContractTerms.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Cooldown.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Cooldown.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Cooldown.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Create_chart_201_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Create_chart_201_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Create_chart_201_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Create_chart_201_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Create_chart_201_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Create_chart_201_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Create_ship_ship_scan_201_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Create_ship_ship_scan_201_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Create_ship_ship_scan_201_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Create_ship_ship_scan_201_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Create_ship_ship_scan_201_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Create_ship_ship_scan_201_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Create_ship_system_scan_201_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Create_ship_system_scan_201_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Create_ship_system_scan_201_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Create_ship_system_scan_201_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Create_ship_system_scan_201_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Create_ship_system_scan_201_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Create_ship_waypoint_scan_201_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Create_ship_waypoint_scan_201_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Create_ship_waypoint_scan_201_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Create_ship_waypoint_scan_201_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Create_ship_waypoint_scan_201_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Create_ship_waypoint_scan_201_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Create_survey_201_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Create_survey_201_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Create_survey_201_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Create_survey_201_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Create_survey_201_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Create_survey_201_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Deliver_contract_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Deliver_contract_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Deliver_contract_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Deliver_contract_200_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Deliver_contract_200_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Deliver_contract_200_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Deliver_contract_request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Deliver_contract_request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Deliver_contract_request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Dock_Ship_200_Response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Dock_Ship_200_Response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Dock_Ship_200_Response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Extract_resources_201_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Extract_resources_201_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Extract_resources_201_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Extract_resources_201_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Extract_resources_201_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Extract_resources_201_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Extract_resources_request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Extract_resources_request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Extract_resources_request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Extraction.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Extraction.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Extraction.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ExtractionYield.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ExtractionYield.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ExtractionYield.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Faction.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Faction.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Faction.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/FactionSymbol.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/FactionSymbol.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/FactionSymbol.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/FactionTrait.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/FactionTrait.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/FactionTrait.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/FactionTraitSymbol.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/FactionTraitSymbol.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/FactionTraitSymbol.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Fulfill_contract_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Fulfill_contract_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Fulfill_contract_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_Mounts_200_Response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_Mounts_200_Response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_Mounts_200_Response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_agents_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_agents_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_agents_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_construction_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_construction_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_construction_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_contract_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_contract_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_contract_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_contracts_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_contracts_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_contracts_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_faction_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_faction_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_faction_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_factions_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_factions_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_factions_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_jump_gate_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_jump_gate_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_jump_gate_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_market_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_market_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_market_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_my_agent_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_my_agent_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_my_agent_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_my_ship_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_my_ship_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_my_ship_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_my_ship_cargo_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_my_ship_cargo_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_my_ship_cargo_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_my_ships_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_my_ships_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_my_ships_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_ship_cooldown_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_ship_cooldown_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_ship_cooldown_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_ship_nav_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_ship_nav_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_ship_nav_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_shipyard_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_shipyard_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_shipyard_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_status_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_status_200_response_announcements_inner.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_announcements_inner.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_announcements_inner.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_status_200_response_leaderboards.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_leaderboards.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_leaderboards.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_status_200_response_leaderboards_mostCredits_inner.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_leaderboards_mostCredits_inner.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_leaderboards_mostCredits_inner.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_status_200_response_leaderboards_mostSubmittedCharts_inner.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_leaderboards_mostSubmittedCharts_inner.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_leaderboards_mostSubmittedCharts_inner.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_status_200_response_links_inner.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_links_inner.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_links_inner.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_status_200_response_serverResets.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_serverResets.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_serverResets.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_status_200_response_stats.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_stats.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_status_200_response_stats.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_system_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_system_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_system_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_system_waypoints_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_system_waypoints_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_system_waypoints_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_system_waypoints_traits_parameter.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_system_waypoints_traits_parameter.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_system_waypoints_traits_parameter.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_systems_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_systems_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_systems_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Get_waypoint_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Get_waypoint_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Get_waypoint_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Install_Mount_201_Response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Install_Mount_201_Response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Install_Mount_201_Response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Install_Mount_201_Response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Install_Mount_201_Response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Install_Mount_201_Response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Install_Mount_Request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Install_Mount_Request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Install_Mount_Request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Jettison_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Jettison_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Jettison_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Jettison_200_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Jettison_200_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Jettison_200_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Jettison_request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Jettison_request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Jettison_request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/JumpGate.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/JumpGate.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/JumpGate.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Jump_ship_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Jump_ship_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Jump_ship_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Jump_ship_200_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Jump_ship_200_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Jump_ship_200_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Jump_ship_request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Jump_ship_request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Jump_ship_request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Market.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Market.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Market.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/MarketTradeGood.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/MarketTradeGood.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/MarketTradeGood.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/MarketTransaction.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/MarketTransaction.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/MarketTransaction.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Meta.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Meta.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Meta.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Navigate_ship_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Navigate_ship_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Navigate_ship_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Navigate_ship_200_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Navigate_ship_200_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Navigate_ship_200_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Navigate_ship_request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Navigate_ship_request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Navigate_ship_request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Negotiate_Contract_200_Response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Negotiate_Contract_200_Response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Negotiate_Contract_200_Response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Negotiate_Contract_200_Response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Negotiate_Contract_200_Response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Negotiate_Contract_200_Response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Orbit_Ship_200_Response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Orbit_Ship_200_Response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Orbit_Ship_200_Response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Orbit_Ship_200_Response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Orbit_Ship_200_Response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Orbit_Ship_200_Response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Patch_ship_nav_request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Patch_ship_nav_request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Patch_ship_nav_request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Purchase_Cargo_201_Response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Purchase_Cargo_201_Response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Purchase_Cargo_201_Response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Purchase_Cargo_Request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Purchase_Cargo_Request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Purchase_Cargo_Request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Purchase_ship_201_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Purchase_ship_201_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Purchase_ship_201_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Purchase_ship_201_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Purchase_ship_201_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Purchase_ship_201_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Purchase_ship_request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Purchase_ship_request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Purchase_ship_request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Refuel_ship_200_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Refuel_ship_200_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Refuel_ship_200_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Refuel_ship_200_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Refuel_ship_200_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Refuel_ship_200_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Refuel_ship_request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Refuel_ship_request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Refuel_ship_request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Register_201_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Register_201_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Register_201_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Register_201_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Register_201_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Register_201_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Register_request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Register_request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Register_request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Remove_Mount_201_Response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Remove_Mount_201_Response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Remove_Mount_201_Response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Remove_Mount_201_Response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Remove_Mount_201_Response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Remove_Mount_201_Response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Remove_Mount_Request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Remove_Mount_Request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Remove_Mount_Request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ScannedShip.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ScannedShip.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ScannedShip.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ScannedShip_engine.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ScannedShip_engine.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ScannedShip_engine.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ScannedShip_frame.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ScannedShip_frame.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ScannedShip_frame.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ScannedShip_mounts_inner.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ScannedShip_mounts_inner.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ScannedShip_mounts_inner.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ScannedShip_reactor.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ScannedShip_reactor.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ScannedShip_reactor.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ScannedSystem.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ScannedSystem.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ScannedSystem.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ScannedWaypoint.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ScannedWaypoint.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ScannedWaypoint.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/SellCargoRequest.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/SellCargoRequest.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/SellCargoRequest.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Sell_Cargo_201_Response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Sell_Cargo_201_Response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Sell_Cargo_201_Response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Sell_Cargo_201_Response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Sell_Cargo_201_Response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Sell_Cargo_201_Response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Ship.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Ship.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Ship.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipCargo.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipCargo.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipCargo.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipCargoItem.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipCargoItem.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipCargoItem.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipCrew.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipCrew.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipCrew.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipEngine.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipEngine.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipEngine.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipFrame.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipFrame.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipFrame.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipFuel.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipFuel.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipFuel.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipFuel_consumed.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipFuel_consumed.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipFuel_consumed.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipModificationTransaction.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipModificationTransaction.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipModificationTransaction.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipModule.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipModule.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipModule.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipMount.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipMount.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipMount.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipNav.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipNav.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipNav.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipNavFlightMode.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipNavFlightMode.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipNavFlightMode.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipNavRoute.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipNavRoute.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipNavRoute.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipNavRouteWaypoint.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipNavRouteWaypoint.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipNavRouteWaypoint.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipNavStatus.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipNavStatus.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipNavStatus.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipReactor.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipReactor.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipReactor.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipRegistration.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipRegistration.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipRegistration.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipRequirements.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipRequirements.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipRequirements.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipRole.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipRole.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipRole.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipType.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipType.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipType.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Ship_Refine_201_Response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Ship_Refine_201_Response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Ship_Refine_201_Response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Ship_Refine_201_Response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Ship_Refine_201_Response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Ship_Refine_201_Response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Ship_Refine_201_Response_data_produced_inner.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Ship_Refine_201_Response_data_produced_inner.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Ship_Refine_201_Response_data_produced_inner.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Ship_refine_request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Ship_refine_request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Ship_refine_request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Shipyard.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Shipyard.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Shipyard.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipyardShip.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipyardShip.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipyardShip.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipyardShip_crew.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipyardShip_crew.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipyardShip_crew.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/ShipyardTransaction.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/ShipyardTransaction.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/ShipyardTransaction.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Shipyard_shipTypes_inner.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Shipyard_shipTypes_inner.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Shipyard_shipTypes_inner.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Siphon.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Siphon.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Siphon.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/SiphonYield.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/SiphonYield.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/SiphonYield.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Siphon_resources_201_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Siphon_resources_201_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Siphon_resources_201_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Siphon_resources_201_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Siphon_resources_201_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Siphon_resources_201_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/SupplyLevel.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/SupplyLevel.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/SupplyLevel.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Supply_construction_201_response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Supply_construction_201_response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Supply_construction_201_response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Supply_construction_201_response_data.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Supply_construction_201_response_data.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Supply_construction_201_response_data.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Supply_construction_request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Supply_construction_request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Supply_construction_request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Survey.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Survey.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Survey.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/SurveyDeposit.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/SurveyDeposit.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/SurveyDeposit.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/System.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/System.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/System.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/SystemFaction.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/SystemFaction.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/SystemFaction.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/SystemType.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/SystemType.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/SystemType.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/SystemWaypoint.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/SystemWaypoint.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/SystemWaypoint.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/TradeGood.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/TradeGood.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/TradeGood.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/TradeSymbol.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/TradeSymbol.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/TradeSymbol.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Transfer_Cargo_200_Response.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Transfer_Cargo_200_Response.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Transfer_Cargo_200_Response.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Transfer_Cargo_Request.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Transfer_Cargo_Request.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Transfer_Cargo_Request.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/Waypoint.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/Waypoint.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/Waypoint.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/WaypointFaction.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/WaypointFaction.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/WaypointFaction.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/WaypointModifier.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/WaypointModifier.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/WaypointModifier.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/WaypointModifierSymbol.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/WaypointModifierSymbol.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/WaypointModifierSymbol.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/WaypointOrbital.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/WaypointOrbital.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/WaypointOrbital.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/WaypointTrait.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/WaypointTrait.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/WaypointTrait.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/WaypointTraitSymbol.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/WaypointTraitSymbol.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/WaypointTraitSymbol.cpp"
+},
+{
+  "directory": "/root/test/cpprest/spacetraders-sdk/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/root/test/cpprest/spacetraders-sdk/include -O3 -DNDEBUG -fPIC -Wall -Wno-unused-variable -std=gnu++14 -o CMakeFiles/CppRestOpenAPIClient.dir/src/model/WaypointType.cpp.o -c /root/test/cpprest/spacetraders-sdk/src/model/WaypointType.cpp",
+  "file": "/root/test/cpprest/spacetraders-sdk/src/model/WaypointType.cpp"
+}
+]
