@@ -2,11 +2,12 @@
 
 #include <thread>
 
+#include <notcute/logger.hpp>
 #include <ncfw/notcurses_app.h>
-#include <ncfw/framed_context.hpp>
-#include <ncfw/layout.hpp>
-#include <ncfw/logger.h>
-#include <ncfw/context.hpp>
+// #include <ncfw/framed_context.hpp>
+// #include <ncfw/layout.hpp>
+// #include <ncfw/logger.h>
+// #include <ncfw/context.hpp>
 #include <boost/signals2.hpp>
 #include "panels.h"
 #include "main_menu.hpp"
@@ -21,18 +22,25 @@ public:
 
     SpaceTradersApplication(const std::string& name)
         : ncfw::Application(name)
-        , help_menu(new ncfw::Context())
+        // , help_menu(new ncfw::Context())
     {
-        auto main_menu = new MainMenu();
-        main_menu->user_selected.connect([this](sptr::User*){ 
-                delete contexts[ncfw::CONTEXT_DASHBOARD];
-                contexts[ncfw::CONTEXT_DASHBOARD] = new Dashboard();
-                context = contexts[ncfw::CONTEXT_DASHBOARD];
+        notcute::Renderer* renderer = notcute::Renderer::get_instance();
+        notcute::Size term = renderer->get_term_size();
+        auto main_menu = new MainMenu2(term.height, term.width);
+
+
+        main_menu->user_selected.connect([](const sptr::User& user){ 
+                // delete contexts[ncfw::CONTEXT_DASHBOARD];
+                // contexts[ncfw::CONTEXT_DASHBOARD] = new Dashboard();
+                // context = contexts[ncfw::CONTEXT_DASHBOARD];
+                log_debug("user selected " + user.name + ", token = " + user.token);
             });
-        contexts[ncfw::CONTEXT_MAIN_MENU] = main_menu;
 
-
-        context = contexts[ncfw::CONTEXT_MAIN_MENU];
+        main_menu->show();
+        // contexts[ncfw::CONTEXT_MAIN_MENU] = main_menu;
+        //
+        //
+        // context = contexts[ncfw::CONTEXT_MAIN_MENU];
         // test_layouts();
     }
 
@@ -49,7 +57,7 @@ public:
         delete pile;
     }
 
-    HelpMenu help_menu;
+    // HelpMenu help_menu;
     // void test_layouts() {
     //     using namespace ncfw::Align;
     //     draw_text(Top|Left);

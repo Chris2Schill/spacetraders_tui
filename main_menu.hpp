@@ -2,135 +2,170 @@
 
 
 #include <ncpp/NotCurses.hh>
-#include <ncfw/context.hpp>
-#include <ncfw/layout.hpp>
-#include <ncfw/selector.hpp>
-#include <ncfw/framed_context.hpp>
-#include <ncfw/reader.hpp>
+#include <notcute/notcute.hpp>
+#include <notcute/list_widget.hpp>
+#include <notcute/dialog.hpp>
+#include <notcute/edittext.hpp>
+#include <notcute/frame_widget.hpp>
+#include <notcute/main_window.hpp>
 
-//#include "spacetraders-sdk/include/CppRestOpenAPIClient/ApiClient.h"
 #include <CppRestOpenAPIClient/api/DefaultApi.h>
 
+#include "notcute/include/notcute/logger.hpp"
 #include "sptr_api.h"
 
-class MainMenu : public ncfw::VerticalLayout {
+
+class UserListWidgetItem : public notcute::ListItem {
 public:
-    MainMenu() {
+    UserListWidgetItem(sptr::User* user) :user(user) {}
+
+    notcute::Widget* get_widget() override { return nullptr; }
+
+    sptr::User* get_user() { return user; }
+
+    std::string to_string() const override {
+        return user->name;
+    }
+
+private:
+    sptr::User* user;
+};
+
+class TitleWidget : public notcute::TextWidget {
+public:
+    TitleWidget(notcute::Widget* parent = nullptr)
+        : notcute::TextWidget(title(), parent){
+        set_scrolling(true);
+    }
+
+    void draw(ncpp::Plane* p) {
+        ncpp::Cell c(' ');
+        c.set_bg_rgb8(255,0,0);
+        c.set_bg_alpha(0);
+        // p->set_bg_alpha(1000000000);
+
+        uint64_t channels = c.get_channels();
+        // uint32_t fg = channels & NCCHANNELS_INIT
+        uint32_t fg = NCCHANNEL_INITIALIZER(0,0,0);
+
+        // ncchannel_set_alpha(uint32_t* channel, unsigned alpha){
+        // c.set_bg_alpha(ncpp::Cell::AlphaBlend);
+        // p->polyfill(0,0,c);
+
+        p->set_bg_alpha(NCALPHA_OPAQUE);
+        p->set_bg_palindex(2);
+        notcute::TextWidget::draw(p);
+        // p->polyfill(0,0,c);
+    }
+
+    static const std::string& title() {
+       static const std::string t = 
+           "  _____ _____        _____ ______   _______ _____            _____  ______ _____   _____ \n"
+           " / ____|  __ \\ /\\   / ____|  ____| |__   __|  __ \\     /\\   |  __ \\|  ____|  __ \\ / ____|\n"
+           "| (___ | |__) /  \\ | |    | |__       | |  | |__) |   /  \\  | |  | | |__  | |__) | (___  \n"
+           " \\___ \\|  ___/ /\\ \\| |    |  __|      | |  |  _  /   / /\\ \\ | |  | |  __| |  _  / \\___ \\ \n"
+           " ____) | |  / ____ \\ |____| |____     | |  | | \\ \\  / ____ \\| |__| | |____| | \\ \\ ____) |\n"
+           "|_____/|_| /_/    \\_\\_____|______|    |_|  |_|  \\_\\/_/    \\_\\_____/|______|_|  \\_\\_____/ ";
+       return t;
+    }
+};
+
+class MainMenu : public notcute::Widget {
+public:
+    MainMenu(Widget* parent = nullptr)
+        : Widget(parent)
+    {
+        // get_plane()->set_fg_palindex(255);
+        // get_plane()->set_fg_default(255);
+        set_name("MainMenu");
+        layout = new notcute::VBoxLayout(this);
+
+        title = new TitleWidget( this);
+        title->set_name("main_menu_title");
+        title->get_layout()->set_behave(LAY_TOP);
+        layout->add_widget(title);
+
+        desc = new notcute::TextWidget("A cute little space game", this);
+        desc->set_scrolling(true),
+        desc->get_layout()->set_behave(LAY_BOTTOM);
+        desc->get_layout()->set_margins_ltrb(0, 1, 0, 0);
+        desc->set_name("main_menu_desc");
+        layout->add_widget(desc);
+
         sptr::load_saved_users();
 
-        using namespace ncfw::Align;
+        notcute::ListWidget* user_list = new notcute::ListWidget(this);
+        user_list->get_layout()->set_size(5, 25);
+        user_list->get_layout()->set_behave(LAY_HCENTER | LAY_HCENTER);
+        user_list->set_focus();
+        user_list->set_name("user_list");
+        for (auto& user : sptr::get_users()) {
+            user_list->add_item(new UserListWidgetItem(&user));
+        }
+        user_list->add_text("REGISTER NEW AGENT");
+        layout->add_widget(user_list);
 
-        // contexts[ncfw::CONTEXT_MAIN_MENU] = ctx;
-        // context = ctx;
-
-        ncplane_options popts = *ncfw::Context::default_options();
-        popts.cols = 89;
-        popts.rows = 20;
-
-        // ncfw::VerticalLayout* ctx = new ncfw::VerticalLayout(this, popts);
-        // ncfw::draw_center_lines(ctx);
-        set_alignment(VCenter|HCenter);
-
-        const std::string title = "  _____ _____        _____ ______   _______ _____            _____  ______ _____   _____ "
-                                  " / ____|  __ \\ /\\   / ____|  ____| |__   __|  __ \\     /\\   |  __ \\|  ____|  __ \\ / ____|"
-                                  "| (___ | |__) /  \\ | |    | |__       | |  | |__) |   /  \\  | |  | | |__  | |__) | (___  "
-                                  " \\___ \\|  ___/ /\\ \\| |    |  __|      | |  |  _  /   / /\\ \\ | |  | |  __| |  _  / \\___ \\ "
-                                  " ____) | |  / ____ \\ |____| |____     | |  | | \\ \\  / ____ \\| |__| | |____| | \\ \\ ____) |"
-                                  "|_____/|_| /_/    \\_\\_____|______|    |_|  |_|  \\_\\/_/    \\_\\_____/|______|_|  \\_\\_____/ ";
-
-
-        auto title_text = new ncfw::Context(this);
-        title_text->resize(6, 89);
-        title_text->set_alignment(HCenter); 
-        title_text->set_scrolling(true);
-        title_text->putstr(title.c_str());
-        add(title_text);
-        auto mainmenu = new ncfw::Selector(this, &popts);
-        mainmenu->item_selected.connect([&](ncfw::SelectorItem* item){
-                if (item->get_name() == "REGISTER NEW AGENT") {
+        user_list->item_selected.connect([this, user_list](notcute::ListItem* item){
+                if (item->to_string() == "REGISTER NEW AGENT") {
                     auto* new_user = register_new_agent();
                     if (new_user) {
-                        mainmenu->add_item(new ncfw::SelectorItem(new_user->name, new_user));
+                        user_list->add_item(new UserListWidgetItem(new_user));
                     }
+                    user_list->set_focus();
                 }
-                else {
-                    sptr::User* user = item->get_item<sptr::User>();
+                else if  (UserListWidgetItem* ui = dynamic_cast<UserListWidgetItem*>(item); ui) {
+                    const sptr::User* user = ui->get_user();
                     sptr::set_user(*user);
-                    user_selected(user);
+                    user_selected(*user);
+                    done_showing();
                 }
             });
-        mainmenu->set_focusable(true);
-        mainmenu->set_alignment(Center);
-        for (auto& user : sptr::get_users()) {
-            mainmenu->add_item(new ncfw::SelectorItem(user.name, &user));
-        }
-        mainmenu->add_item(new ncfw::SelectorItem("REGISTER NEW AGENT"));
-        add(mainmenu, ncfw::Context::FOCUSED);
     }
-
-
-    boost::signals2::signal<void(sptr::User* user)> user_selected;
 
     sptr::User* register_new_agent() {
-        
-        ncreader_options opts {
-            .tchannels = NCCHANNEL_INITIALIZER(255,255,255),
-            .flags = NCREADER_OPTION_HORSCROLL | NCREADER_OPTION_CURSOR
-        };
-        ncplane_options popts {
-            .rows = 1,
-            .cols = 50,
-        };
-        ncplane_options popts2 {
-            .rows = 4,
-            .cols = 50,
-        };
 
-        auto mainctx = new ncfw::VerticalLayout();
-        auto reader_layout = new ncfw::VerticalLayout(mainctx, &popts2);
-        auto plane = new ncfw::FramedContext(reader_layout, &popts);
+        notcute::FullScreenDialog dialog("Enter New Agent Name");
+        dialog.exec();
+        Widget::get_focused_widget() = nullptr;
 
-        auto reader_plane = new ncfw::Context(plane, &popts);
-        auto reader = new ncfw::Reader(reader_plane, &opts);
-
-        reader_layout->perimeter_double(0,0,0);
-        reader_layout->add(new ncfw::Text("Enter New Agent Name", reader_layout));
-        reader_layout->add(plane);
-        // reader->printf("BBBBBBB");
-
-        bool quit = false;
-        while (!quit) {
-            mainctx->show();
-            ncinput ni;
-            ncpp::NotCurses::get_instance().get(true, &ni);
-            reader->offer_input(&ni);
-            if (ni.id == NCKEY_ENTER) {
-                quit = true;
-            }
+        if (dialog.get_was_canceled()) {
+            return nullptr;
         }
-        auto newName = std::string(reader->get_contents());
-        delete mainctx;
 
+        const std::string& new_agent_name = dialog.get_entry();
 
+        try{
+            static api::DefaultApi api(sptr::get_api_client());
+            auto request = std::make_shared<api::Register_request>();
+            request->setSymbol(new_agent_name);
+            auto faction = std::make_shared<api::FactionSymbol>();
+            faction->setValue(models::FactionSymbol::eFactionSymbol::FactionSymbol_COSMIC);
+            request->setFaction({faction});
+            auto task = api.r_register(request);
+            task.wait();
+            auto new_agent = task.get()->getData();
+            // notcute::log_debug(fmt::format("NEW USER RESP: {}", new_agent->toJson().serialize()));
 
-        static api::DefaultApi api(sptr::get_api_client());
-        auto request = std::make_shared<api::Register_request>();
-        request->setSymbol(newName);
-        auto faction = std::make_shared<api::FactionSymbol>();
-        faction->setValue(models::FactionSymbol::eFactionSymbol::FactionSymbol_COSMIC);
-        request->setFaction({faction});
-        auto task = api.r_register(request);
-        task.wait();
-        auto new_agent = task.get()->getData();
-        log_debug(fmt::format("NEW USER RESP: {}", new_agent->toJson().serialize()));
+            sptr::User newUser;
+            newUser.name = new_agent->getAgent()->getSymbol();
+            newUser.token = new_agent->getToken();
+            sptr::get_users().push_back(newUser);
+            sptr::write_saved_users();
 
-        sptr::User newUser;
-        newUser.name = new_agent->getAgent()->getSymbol();
-        newUser.token = new_agent->getToken();
-        sptr::get_users().push_back(newUser);
-        sptr::write_saved_users();
-
-        return &sptr::get_users().back();
+            return &sptr::get_users().back();
+        }
+        catch(const std::exception& e){
+            notcute::log_debug(e.what());
+        }
+        return nullptr;
     }
 
+    // Signals
+    boost::signals2::signal<void(const sptr::User& user)> user_selected;
+
+    notcute::TextWidget* title = nullptr;
+private:
+
+    notcute::TextWidget* desc = nullptr;
+    notcute::Box* layout = nullptr;
 };

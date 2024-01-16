@@ -19,8 +19,8 @@ endif()
 
 add_subdirectory(spacetraders-sdk)
 add_subdirectory(json)
-add_subdirectory(notcurses_framework)
-add_subdirectory(ncqt)
+# add_subdirectory(notcurses_framework)
+# add_subdirectory(ncqt)
 add_subdirectory(notcute)
 
 set(SOURCES
@@ -31,7 +31,7 @@ set(SOURCES
 find_package(spdlog REQUIRED)
 
 add_executable(spacetraders ${SOURCES})
-target_link_libraries(spacetraders PRIVATE ncfw ncqt notcute nlohmann_json CppRestOpenAPIClient spdlog::spdlog)
+target_link_libraries(spacetraders PRIVATE notcute nlohmann_json CppRestOpenAPIClient spdlog::spdlog)
 target_link_directories(spacetraders PRIVATE /usr/local/lib)
 
 configure_file("userdata.cfg" "${CMAKE_BINARY_DIR}")

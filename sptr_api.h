@@ -3,8 +3,8 @@
 #include <cctype>
 #include <algorithm>
 
-#include <ncfw/logger.h>
-#include <ncfw/ini.h>
+#include <notcute/logger.hpp>
+#include <notcute/ini.h>
 #include <CppRestOpenAPIClient/api/AgentsApi.h>
 
 
@@ -39,8 +39,8 @@ namespace sptr {
                            [](unsigned char c){ return std::toupper(c); });
 
             get_users().emplace_back(u);
-            log_debug(fmt::format("user.name = {}", u.name));
-            log_debug(fmt::format("user.token = {}", u.token));
+            // notcute::log_debug(fmt::format("user.name = {}", u.name));
+            // notcute::log_debug(fmt::format("user.token = {}", u.token));
         }
     }
 
