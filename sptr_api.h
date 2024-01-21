@@ -7,8 +7,23 @@
 #include <notcute/ini.h>
 #include <CppRestOpenAPIClient/api/AgentsApi.h>
 
+#define API_ERROR_GUARD_START try{
+#define API_ERROR_GUARD_END                                                        \
+    }                                                                              \
+    catch(const api::ApiException& ex){                                            \
+        notcute::log_debug(ex.what());                                             \
+        auto ss = std::dynamic_pointer_cast<std::stringstream>( ex.getContent() ); \
+        if( nullptr != ss )                                                        \
+        {                                                                          \
+            notcute::log_debug(ss->str());                                         \
+        }                                                                          \
+        std::string err(ex.what());                                                \
+    }
+
 
 namespace sptr {
+
+
 
     struct User {
         std::string name;
@@ -77,5 +92,83 @@ namespace sptr {
     inline std::shared_ptr<api::ApiClient> get_api_client() {
         static auto c = create_api_client();
         return c;
+    }
+
+    inline std::string pretty_json(std::string json)
+    {
+        int tabs, tokens; //here tokens are  { } , :
+        tokens = -1;
+        char ch;
+        std::stringstream fin(json);
+        std::stringstream fout;
+        while (fin.get(ch))
+        {
+
+            if (ch == '{')
+            {
+                tokens++;
+
+                //open braces tabs
+                tabs = tokens;
+                if (tokens > 0)
+                    fout << "\n";
+                while (tabs)
+                {
+                    fout << "\t";
+                    tabs--;
+                }
+                fout << ch << "\n";
+
+                //json key:value tabs
+                tabs = tokens + 1;
+                while (tabs)
+                {
+                    fout << "\t";
+                    tabs--;
+                }
+            }
+            else if (ch == ':')
+            {
+                fout << " : ";
+            }
+            else if (ch == ',')
+            {
+                fout <<  ",\n";
+                tabs = tokens + 1;
+                while (tabs)
+                {
+                    fout << "\t";
+                    tabs--;
+                }
+            }
+            else if (ch == '}')
+            {
+                tabs = tokens;
+                fout << "\n";
+                while (tabs)
+                {
+                    fout << "\t";
+                    tabs--;
+                }
+
+                fout << ch << "\n";
+                tokens--;
+                tabs = tokens + 1;
+
+                while (tabs)
+                {
+                    fout << "\t";
+                    tabs--;
+                }
+            }
+            else
+            {
+                if (ch == '\n' || ch == '\t')
+                    continue;
+                else
+                    fout << ch;
+            }
+        }
+        return fout.str();
     }
 }

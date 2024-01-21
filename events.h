@@ -1,10 +1,32 @@
 #pragma once
 
-#include "event_bus.h"
+#include <notcute/event_loop.hpp>
 
-#include "panels/panel.h"
-#include "context.hpp"
+namespace sptr {
 
-struct PanelNavigate {
-    ePanel panelId;
+    enum EventType {
+        PAYLOAD_EVENT = notcute::Event::USER_EVENT,
+        CONTRACT_ACCEPTED_EVENT,
+        EVENTLOG_EVENT,
+    };
+}
+
+
+// Generic event that carries any payload
+template<typename T>
+class PayloadEvent : public notcute::Event {
+public:
+    PayloadEvent(notcute::Widget* sender,
+                 int type,
+                 const T& p)
+        : notcute::Event(sender, static_cast<notcute::Event::EventType>(type))
+        , payload(p)
+    {}
+
+    const T& get_payload() const { return payload; }
+
+
+private:
+    notcute::Event::EventType type;
+    T payload;
 };

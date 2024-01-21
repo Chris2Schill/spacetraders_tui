@@ -18,7 +18,6 @@ endif()
 #TODO fix this properly by adding an install to BSI libraries
 
 add_subdirectory(spacetraders-sdk)
-add_subdirectory(json)
 # add_subdirectory(notcurses_framework)
 # add_subdirectory(ncqt)
 add_subdirectory(notcute)
@@ -31,8 +30,7 @@ set(SOURCES
 find_package(spdlog REQUIRED)
 
 add_executable(spacetraders ${SOURCES})
-target_link_libraries(spacetraders PRIVATE notcute nlohmann_json CppRestOpenAPIClient spdlog::spdlog)
+target_link_libraries(spacetraders PRIVATE notcute CppRestOpenAPIClient spdlog::spdlog)
 target_link_directories(spacetraders PRIVATE /usr/local/lib)
 
-configure_file("userdata.cfg" "${CMAKE_BINARY_DIR}")
 configure_file("users.ini" "${CMAKE_BINARY_DIR}")

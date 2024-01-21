@@ -710,6 +710,11 @@ pplx::task<std::shared_ptr<Get_system_waypoints_200_response>> SystemsApi::getSy
     if (type && *type != nullptr)
     {
         // localVarQueryParams[utility::conversions::to_string_t("type")] = ApiClient::parameterToString(*type);
+
+        // try this maybe it works
+        // localVarQueryParams[utility::conversions::to_string_t("type")] = type->get()->toJson().serialize(); //ApiClient::parameterToString(*type);
+
+        throw ApiException(400, utility::conversions::to_string_t("SystemsApi->getSystemWaypoints NOT YET IMPLEMENTED TYPE FILTER"));
     }
     if (traits)
     {

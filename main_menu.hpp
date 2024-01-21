@@ -34,7 +34,7 @@ private:
 class TitleWidget : public notcute::TextWidget {
 public:
     TitleWidget(notcute::Widget* parent = nullptr)
-        : notcute::TextWidget(title(), parent){
+        : notcute::TextWidget(title(), parent, LAY_LEFT){
         set_scrolling(true);
     }
 
@@ -52,6 +52,7 @@ public:
         // c.set_bg_alpha(ncpp::Cell::AlphaBlend);
         // p->polyfill(0,0,c);
 
+        p->set_fg_palindex(1);
         p->set_bg_alpha(NCALPHA_OPAQUE);
         p->set_bg_palindex(2);
         notcute::TextWidget::draw(p);
@@ -75,12 +76,10 @@ public:
     MainMenu(Widget* parent = nullptr)
         : Widget(parent)
     {
-        // get_plane()->set_fg_palindex(255);
-        // get_plane()->set_fg_default(255);
         set_name("MainMenu");
         layout = new notcute::VBoxLayout(this);
 
-        title = new TitleWidget( this);
+        title = new TitleWidget(this);
         title->set_name("main_menu_title");
         title->get_layout()->set_behave(LAY_TOP);
         layout->add_widget(title);
@@ -95,10 +94,11 @@ public:
         sptr::load_saved_users();
 
         notcute::ListWidget* user_list = new notcute::ListWidget(this);
-        user_list->get_layout()->set_size(5, 25);
-        user_list->get_layout()->set_behave(LAY_HCENTER | LAY_HCENTER);
+        user_list->get_layout()->set_size(10, 25);
+        user_list->get_layout()->set_behave(LAY_HCENTER);
         user_list->set_focus();
         user_list->set_name("user_list");
+        user_list->set_title("Agents");
         for (auto& user : sptr::get_users()) {
             user_list->add_item(new UserListWidgetItem(&user));
         }
@@ -167,5 +167,5 @@ public:
 private:
 
     notcute::TextWidget* desc = nullptr;
-    notcute::Box* layout = nullptr;
+    notcute::Layout* layout = nullptr;
 };
