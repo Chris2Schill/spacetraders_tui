@@ -18,8 +18,6 @@ endif()
 #TODO fix this properly by adding an install to BSI libraries
 
 add_subdirectory(spacetraders-sdk)
-# add_subdirectory(notcurses_framework)
-# add_subdirectory(ncqt)
 add_subdirectory(notcute)
 
 set(SOURCES
