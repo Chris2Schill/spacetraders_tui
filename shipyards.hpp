@@ -1,13 +1,13 @@
 #pragma once
 
-#include "notcute/event_loop.hpp"
-#include "notcute/frame_widget.hpp"
-#include "notcute/list_widget.hpp"
-#include "notcute/logger.hpp"
-#include "notcute/scroll_area.hpp"
+#include <notcute/event_loop.hpp>
+#include <notcute/frame_widget.hpp>
+#include <notcute/list_widget.hpp>
+#include <notcute/logger.hpp>
+#include <notcute/focus_stack.hpp>
 #include "sptr_api.h"
 #include "waypoints.hpp"
-#include "focus_node.hpp"
+#include "util.h"
 
 using Shipyard = std::shared_ptr<api::Shipyard>;
 using ShipyardShip = std::shared_ptr<api::ShipyardShip>;
@@ -67,9 +67,13 @@ public:
             });
 
 
-        std::vector<FocusNode*> nodes = setup_focus_graph({
+        std::vector<FocusNode*> nodes = setup_focus_graph(
+            {
                 {ui.available_ships_list},
-            });
+            },
+            [=](FocusNode* node){ sptr::set_focusable_color(node->widget, true); },
+            [=](FocusNode* node){ sptr::set_focusable_color(node->widget, false); }
+            );
         focus_node = nodes.front();
     }
 

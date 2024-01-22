@@ -2,8 +2,8 @@
 
 #include <notcute/widget.hpp>
 #include <notcute/spacer.hpp>
+#include <notcute/focus_stack.hpp>
 
-#include "focus_node.hpp"
 #include "agent.hpp"
 #include "contracts.hpp"
 #include "ships.hpp"
@@ -76,14 +76,18 @@ public:
                 panels.shipyards->set_system_symbol(ship->getNav()->getSystemSymbol());
             });
 
-        std::vector<FocusNode*> focus_nodes = setup_focus_graph({
-            {panels.my_agent,  panels.my_agent->get_content_pane()},
-            {panels.contracts, panels.contracts->get_content_pane()},
-            {panels.ships,     panels.ships->get_content_pane()},
-            {panels.waypoints, panels.waypoints->get_content_pane()},
-            {panels.shipyards, panels.shipyards->get_content_pane()},
-            {panels.event_log, nullptr},
-        });
+        std::vector<FocusNode*> focus_nodes = setup_focus_graph(
+            {
+                {panels.my_agent,  panels.my_agent->get_content_pane()},
+                {panels.contracts, panels.contracts->get_content_pane()},
+                {panels.ships,     panels.ships->get_content_pane()},
+                {panels.waypoints, panels.waypoints->get_content_pane()},
+                {panels.shipyards, panels.shipyards->get_content_pane()},
+                {panels.event_log, nullptr},
+            },
+            [=](FocusNode* node){ sptr::set_focusable_color(node->widget, true); },
+            [=](FocusNode* node){ sptr::set_focusable_color(node->widget, false); }
+        );
         focus_graph_node = focus_nodes.front();
         set_active_focus_node(focus_nodes.front());
         focus_stack_push({this, &focus_graph_node});
@@ -115,7 +119,7 @@ public:
         notcute::Widget* from_wid = static_cast<notcute::Widget*>(focus_graph_node->userptr);
         notcute::Widget* to_wid   = static_cast<notcute::Widget*>(node->userptr);
 
-        focus_graph_node->off_focus_callback();
+        focus_graph_node->off_focus();
 
         // remove it
         panel_content_container->get_layout()->take(from_wid);
@@ -126,7 +130,7 @@ public:
         }
 
         focus_graph_node = node;
-        focus_graph_node->on_focus_callback();
+        focus_graph_node->on_focus();
         notcute::log_debug("FOCUS ON " + focus_graph_node->widget->get_name());
         redraw();
     }
