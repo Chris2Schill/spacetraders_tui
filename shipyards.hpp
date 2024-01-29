@@ -5,6 +5,7 @@
 #include <notcute/list_widget.hpp>
 #include <notcute/logger.hpp>
 #include <notcute/focus_stack.hpp>
+#include "notcute/widget.hpp"
 #include "sptr_api.h"
 #include "waypoints.hpp"
 #include "util.h"
@@ -44,9 +45,10 @@ using namespace notcute;
 
 class ShipyardContent : public notcute::FrameWidget {
 public:
-    ShipyardContent(notcute::Widget* parent = nullptr)
+    ShipyardContent(Widget* shipyard_list, notcute::Widget* parent = nullptr)
         :FrameWidget(parent),
-         api(sptr::get_api_client())
+         api(sptr::get_api_client()),
+         shipyard_list(shipyard_list)
     {
         set_layout(new notcute::HBoxLayout);
         set_focus_policy(notcute::FocusPolicy::FOCUS);
@@ -65,16 +67,6 @@ public:
                 ui.ship_view->text = str;
                 redraw();
             });
-
-
-        std::vector<FocusNode*> nodes = setup_focus_graph(
-            {
-                {ui.available_ships_list},
-            },
-            [=](FocusNode* node){ sptr::set_focusable_color(node->widget, true); },
-            [=](FocusNode* node){ sptr::set_focusable_color(node->widget, false); }
-            );
-        focus_node = nodes.front();
     }
 
     void request_data() {
@@ -94,12 +86,14 @@ public:
                 auto payload_event = static_cast<PayloadEvent<Shipyard>*>(e);
                 shipyard = payload_event->get_payload();
                 ui.available_ships_list->clear();
+                log_debug("SHIPYARD AVAILSHIPS CLEARED");
                 notcute::log_debug(sptr::pretty_json(shipyard->toJson().serialize()));
-                notcute::log_debug(shipyard->toJson().serialize());
                 for (ShipyardShip s : shipyard->getShips()) {
                     auto item = new ShipyardShipListItem(s);
                     ui.available_ships_list->add_item(item);
+                    log_debug("SHIPYARD AVAILSHIPS ADDED");
                 }
+                redraw();
                 return true;
             }
             default:
@@ -110,21 +104,15 @@ public:
     }
 
     bool on_keyboard_event(notcute::KeyboardEvent* e) override{
-
         switch(e->get_key()) {
-            case 'r':
-                {
-                redraw();
-                }
-                break;
             case NCKEY_ESC:
-                focus_stack_pop();
+                shipyard_list->set_focus();
                 return true;
             default:
                 break;
         }
 
-        if (focus_node->widget->on_keyboard_event(e)) {
+        if (ui.available_ships_list->on_keyboard_event(e)) {
             return true;
         }
 
@@ -136,11 +124,9 @@ public:
         waypoint_symbol = waypoint;
         notcute::log_debug(fmt::format("set_symbols {} {}", system, waypoint));
         set_title(waypoint_symbol);
+        ui.available_ships_list->clear();
         request_data();
-    }
-
-    void take_focus() {
-        focus_stack_push({this, &focus_node});
+        redraw();
     }
 
 private:
@@ -153,10 +139,10 @@ private:
 
     std::string waypoint_symbol;
     std::string system_symbol;
-
-    FocusNode* focus_node;
     
     Shipyard shipyard;
+
+    Widget* shipyard_list;
 };
 
 class ShipyardsList : public WaypointsList {
@@ -166,8 +152,9 @@ public:
     {
         set_title("Shipyards");
         set_name("Shipyards");
+        set_focus_policy(notcute::FocusPolicy::FOCUS);
 
-        sy_content = new ShipyardContent(this);
+        sy_content = new ShipyardContent(this, this);
         content_pane = sy_content;
 
         item_hovered.disconnect_all_slots();
@@ -182,7 +169,7 @@ public:
     bool on_keyboard_event(notcute::KeyboardEvent* e) override {
         switch(e->get_key()) {
             case NCKEY_ENTER:
-                sy_content->take_focus();
+                sy_content->set_focus();
                 break;
             default:
                 break;
@@ -201,6 +188,8 @@ public:
                    API_ERROR_GUARD_END
                });
     }
+
+    SPTR_FOCUS_HANDLER_IMPL
 
 private:
     ShipyardContent* sy_content;

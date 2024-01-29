@@ -6,6 +6,7 @@
 #include <notcute/text_widget.hpp>
 #include <notcute/spacer.hpp>
 #include <CppRestOpenAPIClient/api/FleetApi.h>
+#include "notcute/widget.hpp"
 #include "sptr_api.h"
 #include "events.h"
 #include <notcute/colors.hpp>
@@ -102,6 +103,7 @@ public:
 
         ui.lcontainer->get_layout()->add_widget(ui.name);
         ui.lcontainer->get_layout()->add_widget(ui.description);
+        ui.lcontainer->get_layout()->add_spacer();
         ui.lcontainer->get_layout()->add_widget(ui.condition);
         ui.lcontainer->get_layout()->add_widget(ui.power_output);
         ui.rcontainer->get_layout()->add_widget(ui.ship_req);
@@ -205,6 +207,7 @@ public:
 
         ui.lcontainer->get_layout()->add_widget(ui.name);
         ui.lcontainer->get_layout()->add_widget(ui.description);
+        ui.lcontainer->get_layout()->add_spacer();
         ui.lcontainer->get_layout()->add_widget(ui.speed);
         ui.rcontainer->get_layout()->add_widget(ui.ship_req);
 
@@ -322,6 +325,7 @@ public:
         get_layout()->set_behave(LAY_HFILL);
         set_title("My Ships");
         set_name("My Ships");
+        set_focus_policy(notcute::FocusPolicy::FOCUS);
 
         item_hovered.connect([this](notcute::ListItem* item){
                 Ship ship = notcute::list_widget_item_t_get_item<Ship>(item);
@@ -339,6 +343,13 @@ public:
                    notcute::EventLoop::get_instance()->post(event);
                    API_ERROR_GUARD_END
                });
+    }
+
+    bool on_keyboard_event(notcute::KeyboardEvent* e) override {
+        if (sptr::handle_leftright(this, e)) {
+            return true;
+        }
+        return ListWidget::on_keyboard_event(e);
     }
 
     bool on_event(notcute::Event* e) override {
@@ -363,6 +374,9 @@ public:
 
     Widget* get_content_pane() const { return content_pane; }
 
+    SPTR_FOCUS_HANDLER_IMPL
+
+private:
     ShipWidget* content_pane = nullptr;
 
     api::FleetApi api;

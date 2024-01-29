@@ -5,8 +5,10 @@
 #include <notcute/list_widget.hpp>
 #include <notcute/text_widget.hpp>
 #include <CppRestOpenAPIClient/api/SystemsApi.h>
+#include "notcute/widget.hpp"
 #include "sptr_api.h"
 #include "events.h"
+#include "util.h"
 
 using Waypoint = std::shared_ptr<api::Waypoint>;
 using Waypoints = std::vector<Waypoint>;
@@ -85,6 +87,7 @@ public:
         get_layout()->set_behave(LAY_HFILL);
         set_title("Waypoints");
         set_name("Waypoints");
+        set_focus_policy(notcute::FocusPolicy::FOCUS);
 
 
         item_hovered.connect([this](notcute::ListItem* item){
@@ -126,6 +129,13 @@ public:
         return Widget::on_event(e);
     }
 
+    bool on_keyboard_event(notcute::KeyboardEvent* e) override {
+        if (sptr::handle_leftright(this, e)) {
+            return true;
+        }
+        return ListWidget::on_keyboard_event(e);
+    }
+
     void set_system_symbol(const std::string& symbol) {
         system_symbol = symbol;
         request_data();
@@ -134,6 +144,8 @@ public:
     virtual Widget* get_content_pane() const { return content_pane; }
 
     notcute::signal<void(Waypoint)> waypoint_selected;
+
+    SPTR_FOCUS_HANDLER_IMPL
 
 protected:
     Widget*     content_pane;

@@ -3,12 +3,13 @@
 
 #include <notcute/list_widget.hpp>
 #include "events.h"
+#include "util.h"
 
 class EventLogEvent : public notcute::Event {
 public:
     EventLogEvent(notcute::Widget* sender,
                   int type)
-        : notcute::Event(sender,static_cast<notcute::Event::EventType>(type))
+        : notcute::Event(static_cast<notcute::Event::EventType>(type), sender)
     {}
 private:
 
@@ -42,11 +43,18 @@ public:
             default:
                 break;
         }
-        return false;
+        return ListWidget::on_event(e);
     }
 
-    notcute::signal<void()> on_next_pane;
-    notcute::signal<void()> on_prev_pane;
+    bool on_keyboard_event(notcute::KeyboardEvent* e) override {
+        if (sptr::handle_leftright(this, e)) {
+            return true;
+        }
+        return ListWidget::on_keyboard_event(e);
+    }
+
+    SPTR_FOCUS_HANDLER_IMPL
+private:
 
     std::queue<EventPtr> events;
 };

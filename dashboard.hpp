@@ -6,13 +6,11 @@
 
 #include "agent.hpp"
 #include "contracts.hpp"
+#include "notcute/event_loop.hpp"
 #include "ships.hpp"
-#include "util.h"
 #include "waypoints.hpp"
 #include "shipyards.hpp"
 #include "eventlog.hpp"
-#include "util.h"
-#include "main_menu.hpp"
 
 class Dashboard : public notcute::Widget {
 public:
@@ -63,7 +61,7 @@ public:
         // TODO: Why doesn't this margin work???? Temporary workaround by putting a space in the text string
         controls_text->get_layout()->set_margins_ltrb(1,0,0,0);
         controls_text->get_layout()->set_behave(LAY_LEFT | LAY_BOTTOM);
-        controls_text->get_plane()->set_fg_palindex(4);
+        controls_text->set_fg(notcute::BLUE);
         get_layout()->add_widget(controls_text);
 
         panels.ships->item_hovered.connect([this](notcute::ListItem* item){
@@ -76,68 +74,43 @@ public:
                 panels.shipyards->set_system_symbol(ship->getNav()->getSystemSymbol());
             });
 
-        std::vector<FocusNode*> focus_nodes = setup_focus_graph(
-            {
-                {panels.my_agent,  panels.my_agent->get_content_pane()},
-                {panels.contracts, panels.contracts->get_content_pane()},
-                {panels.ships,     panels.ships->get_content_pane()},
-                {panels.waypoints, panels.waypoints->get_content_pane()},
-                {panels.shipyards, panels.shipyards->get_content_pane()},
-                {panels.event_log, nullptr},
-            },
-            [=](FocusNode* node){ sptr::set_focusable_color(node->widget, true); },
-            [=](FocusNode* node){ sptr::set_focusable_color(node->widget, false); }
-        );
-        focus_graph_node = focus_nodes.front();
-        set_active_focus_node(focus_nodes.front());
-        focus_stack_push({this, &focus_graph_node});
+        set_tab_order(panels.my_agent, panels.contracts);
+        set_tab_order(panels.contracts, panels.ships);
+        set_tab_order(panels.ships, panels.waypoints);
+        set_tab_order(panels.waypoints, panels.shipyards);
+        set_tab_order(panels.shipyards, panels.event_log);
+
+        panels.my_agent->focus_changed.connect([this](bool focused) { if (focused) set_content_pane(panels.my_agent); });
+        panels.contracts->focus_changed.connect([this](bool focused){ if (focused) set_content_pane(panels.contracts); });
+        panels.ships->focus_changed.connect([this](bool focused)    { if (focused) set_content_pane(panels.ships); });
+        panels.waypoints->focus_changed.connect([this](bool focused){ if (focused) set_content_pane(panels.waypoints); });
+        panels.shipyards->focus_changed.connect([this](bool focused){ if (focused) set_content_pane(panels.shipyards); });
+        // panels.event_log->focus_changed.connect([this](bool focused){ if (focused) set_content_pane(panels.event_log); });
+
+        panels.my_agent->set_focus();
+        focus_stack_push(this);
     }
 
-    bool on_keyboard_event(notcute::KeyboardEvent* e) override {
-
-        switch(e->get_key()) {
-            case 'l':
-            case NCKEY_RIGHT:
-                set_active_focus_node(focus_graph_node->next);
-                return true;
-            case 'h':
-            case NCKEY_LEFT:
-                set_active_focus_node(focus_graph_node->prev);
-                return true;
-            default:
-                break;
-        }
-
-        if (focus_graph_node->widget->on_keyboard_event(e)) {
-            return true;
-        }
-
-        return Widget::on_keyboard_event(e);
+    bool on_focus_in_event(notcute::FocusEvent* e) override {
+        focus_next_in_chain();
+        Widget* focused = Widget::get_focused_widget();
+        // focus_stack_push(focused);
+        return true;
     }
 
-    void set_active_focus_node(FocusNode* node) {
-        notcute::Widget* from_wid = static_cast<notcute::Widget*>(focus_graph_node->userptr);
-        notcute::Widget* to_wid   = static_cast<notcute::Widget*>(node->userptr);
-
-        focus_graph_node->off_focus();
-
-        // remove it
-        panel_content_container->get_layout()->take(from_wid);
-
-        // add in the new current nodes content
-        if (to_wid) {
-            panel_content_container->get_layout()->add_widget(to_wid);
-        }
-
-        focus_graph_node = node;
-        focus_graph_node->on_focus();
-        notcute::log_debug("FOCUS ON " + focus_graph_node->widget->get_name());
+    template<typename T>
+    void set_content_pane(T* wid) {
+        log_debug("SET CONTENT PANE");
+        panel_content_container->get_layout()->take(active_content_pane);
+        panel_content_container->get_layout()->add_widget(wid->get_content_pane());
+        active_content_pane = wid->get_content_pane();
+        // TODO shouldn't need to redraw
         redraw();
     }
 
 private:
-    FocusNode* focus_graph_node;
     notcute::Widget* panel_content_container = nullptr;
+    notcute::Widget* active_content_pane = nullptr;
 
     notcute::Widget*          main_widget = nullptr;
     notcute::FrameWidget*     container = nullptr;

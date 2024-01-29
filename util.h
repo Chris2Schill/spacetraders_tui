@@ -58,7 +58,32 @@ inline notcute::Widget* new_vbox(notcute::Widget* parent = nullptr) {
     return wid;
 }
 
+inline bool handle_leftright(notcute::Widget* wid, notcute::KeyboardEvent*e) {
+    assert(wid->get_parent());
+    switch(e->get_key()) {
+        case 'l':
+        case NCKEY_RIGHT:
+            wid->get_parent()->get_parent()->get_parent()->focus_next_in_chain();
+            return true;
+        case 'h':
+        case NCKEY_LEFT:
+            wid->get_parent()->get_parent()->get_parent()->focus_prev_in_chain();
+            return true;
+        default:
+            break;
+    }
+    return false;
 }
 
 
+} // end namespace sptr
 
+#define SPTR_FOCUS_HANDLER_IMPL                                \
+    bool on_focus_in_event(notcute::FocusEvent* e) override {  \
+        sptr::set_focusable_color(this, true);                 \
+        return true;                                           \
+    }                                                          \
+    bool on_focus_out_event(notcute::FocusEvent* e) override { \
+        sptr::set_focusable_color(this, false);                \
+        return true;                                           \
+    }

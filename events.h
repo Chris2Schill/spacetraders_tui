@@ -19,7 +19,7 @@ public:
     PayloadEvent(notcute::Widget* sender,
                  int type,
                  const T& p)
-        : notcute::Event(sender, static_cast<notcute::Event::EventType>(type))
+        : notcute::Event(static_cast<notcute::Event::EventType>(type), sender, sender)
         , payload(p)
     {}
 

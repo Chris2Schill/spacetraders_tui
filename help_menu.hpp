@@ -18,6 +18,8 @@ public:
         set_layout(new notcute::VBoxLayout(options.size()+2,50));
         move_to_term_center();
         set_focus_policy(notcute::FocusPolicy::FOCUS);
+
+        set_attribute(ATTR_FOCUS_ON_SHOW, true);
     }
 
     bool on_keyboard_event(notcute::KeyboardEvent* e) override {
@@ -31,7 +33,8 @@ public:
     }
 
     void draw(ncpp::Plane* p) override {
-        draw_solid_bg(p);
+        notcute::fill(p, " ");
+        // p->perimeter_rounded(0,0,0);
 
         // ncpp::Cell c(' ');
         // c.set_fg_rgb8(0, 000, 100);

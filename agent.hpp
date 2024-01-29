@@ -3,8 +3,10 @@
 #include <notcute/frame_widget.hpp>
 #include <CppRestOpenAPIClient/api/AgentsApi.h>
 
+#include "notcute/widget.hpp"
 #include "sptr_api.h"
 #include "events.h"
+#include "util.h"
 
 using Agent = std::shared_ptr<api::Agent>;
 
@@ -54,6 +56,7 @@ public:
         get_layout()->set_behave(LAY_HFILL);
         set_title("My Agent");
         set_name("My Agent");
+        set_focus_policy(notcute::FocusPolicy::FOCUS);
         content_pane = new MyAgentContentPane(this);
     }
 
@@ -68,7 +71,7 @@ public:
                });
     }
 
-    bool on_event(notcute::Event* e) {
+    bool on_event(notcute::Event* e) override {
         switch(static_cast<sptr::EventType>(e->get_type())) {
             case sptr::PAYLOAD_EVENT: {
                 auto payload_event = static_cast<PayloadEvent<Agent>*>(e);
@@ -81,10 +84,17 @@ public:
             default:
                 break;
         }
-        return Widget::on_event(e);
+        return FrameWidget::on_event(e);
     }
 
-    void draw(ncpp::Plane* p) {
+    bool on_keyboard_event(notcute::KeyboardEvent* e) override {
+        if (sptr::handle_leftright(this, e)) {
+            return true;
+        }
+        return FrameWidget::on_keyboard_event(e);
+    }
+
+    void draw(ncpp::Plane* p) override {
         FrameWidget::draw(p);
         if (my_agent) {
             p->set_fg_palindex(255);
@@ -96,6 +106,8 @@ public:
     }
 
     notcute::Widget* get_content_pane() { return content_pane; }
+
+    SPTR_FOCUS_HANDLER_IMPL
 
 private:
     std::shared_ptr<api::Agent> my_agent;

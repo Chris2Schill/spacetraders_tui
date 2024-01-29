@@ -7,9 +7,11 @@
 #include <CppRestOpenAPIClient/api/ContractsApi.h>
 
 #include "CppRestOpenAPIClient/ApiException.h"
+#include "notcute/widget.hpp"
 #include "sptr_api.h"
 #include "events.h"
 #include "help_menu.hpp"
+#include "util.h"
 
 using ContractPtr = std::shared_ptr<api::Contract>;
 using Contracts   = std::vector<ContractPtr>;
@@ -103,8 +105,7 @@ public:
         get_layout()->set_behave(LAY_HFILL);
         set_title("Contracts");
         set_name("Contracts");
-
-        Widget::focus_state_changed.connect([this](bool focus){ focus_state_changed(focus); });
+        set_focus_policy(notcute::FocusPolicy::FOCUS);
 
         content_pane = new ContractWidget(this);
 
@@ -114,7 +115,6 @@ public:
                 content_pane->set_contract(contract);
             });
     }
-
 
     bool on_event(notcute::Event* e) override {
         switch(static_cast<sptr::EventType>(e->get_type())) {
@@ -143,8 +143,9 @@ public:
                 return true;
             }
             default:
-                break;
+                return ListWidget::on_event(e);
         }
+
 
         return Widget::on_event(e);
     }
@@ -152,6 +153,10 @@ public:
     notcute::FrameWidget* get_content_pane() { return content_pane; }
 
     bool on_keyboard_event(notcute::KeyboardEvent* e) override {
+        if (sptr::handle_leftright(this, e)) {
+            return true;
+        }
+
         switch(e->get_key()) {
             case 'a':
                 accept_contract(get_selected_contract());
@@ -175,14 +180,6 @@ public:
                });
     }
 
-    void focus_state_changed(bool focus) {
-        int pal_index = focus ? 200 : 1;
-        if (auto* frame = dynamic_cast<notcute::FrameWidget*>(get_parent()); frame) {
-            frame->get_plane()->set_fg_palindex(pal_index);
-            frame->redraw();
-        }
-    }
-
     ContractPtr get_selected_contract() {
         return contracts[get_selected_idx()];
     }
@@ -203,6 +200,8 @@ public:
         delete fw;
         redraw();
     }
+
+    SPTR_FOCUS_HANDLER_IMPL
 
 private:
     api::ContractsApi api;
