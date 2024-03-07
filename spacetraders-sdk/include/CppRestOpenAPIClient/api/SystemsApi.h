@@ -126,7 +126,7 @@ public:
         boost::optional<int32_t> page,
         boost::optional<int32_t> limit,
         boost::optional<std::shared_ptr<WaypointType>> type,
-        boost::optional<utility::string_t> traits
+        boost::optional<std::shared_ptr<WaypointTraitSymbol>> traits
     ) const;
     /// <summary>
     /// List Systems

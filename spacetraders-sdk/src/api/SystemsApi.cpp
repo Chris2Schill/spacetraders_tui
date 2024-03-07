@@ -657,7 +657,8 @@ pplx::task<std::shared_ptr<Get_system_200_response>> SystemsApi::getSystem(utili
         return localVarResult;
     });
 }
-pplx::task<std::shared_ptr<Get_system_waypoints_200_response>> SystemsApi::getSystemWaypoints(utility::string_t systemSymbol, boost::optional<int32_t> page, boost::optional<int32_t> limit, boost::optional<std::shared_ptr<WaypointType>> type, boost::optional<utility::string_t> traits) const
+
+pplx::task<std::shared_ptr<Get_system_waypoints_200_response>> SystemsApi::getSystemWaypoints(utility::string_t systemSymbol, boost::optional<int32_t> page, boost::optional<int32_t> limit, boost::optional<std::shared_ptr<WaypointType>> type, boost::optional<std::shared_ptr<WaypointTraitSymbol>> traits) const
 {
 
 
@@ -709,16 +710,22 @@ pplx::task<std::shared_ptr<Get_system_waypoints_200_response>> SystemsApi::getSy
     }
     if (type && *type != nullptr)
     {
-        // localVarQueryParams[utility::conversions::to_string_t("type")] = ApiClient::parameterToString(*type);
+        localVarQueryParams[utility::conversions::to_string_t("type")] = ApiClient::parameterToString(*type);
 
         // try this maybe it works
         // localVarQueryParams[utility::conversions::to_string_t("type")] = type->get()->toJson().serialize(); //ApiClient::parameterToString(*type);
 
         throw ApiException(400, utility::conversions::to_string_t("SystemsApi->getSystemWaypoints NOT YET IMPLEMENTED TYPE FILTER"));
     }
-    if (traits)
+    if (traits && *traits != nullptr)
     {
-        localVarQueryParams[utility::conversions::to_string_t("traits")] = *traits;
+        // boost::optional<std::shared_ptr<WaypointTrait>> opttrait;
+        std::string tmp = ApiClient::parameterToString(*traits);
+        tmp.erase(std::remove(tmp.begin(), tmp.end(), '\"'),
+                tmp.end());
+        localVarQueryParams[utility::conversions::to_string_t("traits")] = tmp;
+
+        // localVarQueryParams[utility::conversions::to_string_t("traits")] = *traits;
     }
 
     std::shared_ptr<IHttpBody> localVarHttpBody;

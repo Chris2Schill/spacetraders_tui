@@ -7,7 +7,7 @@
 #include <notcute/spacer.hpp>
 #include <CppRestOpenAPIClient/api/FleetApi.h>
 #include "notcute/widget.hpp"
-#include "sptr_api.h"
+#include <sptr/api.h>
 #include "events.h"
 #include <notcute/colors.hpp>
 #include "util.h"
@@ -265,7 +265,7 @@ public:
     {
         ship = s;
         auto pretty_json = sptr::pretty_json(ship->toJson().serialize());
-        notcute::log_debug(pretty_json);
+        notcute::log_debug("{}", pretty_json);
 
         ui.ship_name->set_text(ship->getSymbol());
         ui.role->set_text(ship->getRegistration()->getRole()->toJson().as_string());

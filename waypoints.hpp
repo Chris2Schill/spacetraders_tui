@@ -6,7 +6,7 @@
 #include <notcute/text_widget.hpp>
 #include <CppRestOpenAPIClient/api/SystemsApi.h>
 #include "notcute/widget.hpp"
-#include "sptr_api.h"
+#include <sptr/api.h>
 #include "events.h"
 #include "util.h"
 

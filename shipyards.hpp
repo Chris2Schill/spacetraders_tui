@@ -5,8 +5,9 @@
 #include <notcute/list_widget.hpp>
 #include <notcute/logger.hpp>
 #include <notcute/focus_stack.hpp>
-#include "notcute/widget.hpp"
-#include "sptr_api.h"
+#include <notcute/widget.hpp>
+#include <CppRestOpenAPIClient/ApiClient.h>
+#include <sptr/api.h>
 #include "waypoints.hpp"
 #include "util.h"
 
@@ -87,7 +88,7 @@ public:
                 shipyard = payload_event->get_payload();
                 ui.available_ships_list->clear();
                 log_debug("SHIPYARD AVAILSHIPS CLEARED");
-                notcute::log_debug(sptr::pretty_json(shipyard->toJson().serialize()));
+                notcute::log_debug("{}", sptr::pretty_json(shipyard->toJson().serialize()));
                 for (ShipyardShip s : shipyard->getShips()) {
                     auto item = new ShipyardShipListItem(s);
                     ui.available_ships_list->add_item(item);
@@ -122,7 +123,7 @@ public:
     void set_symbols(const std::string& system, const std::string& waypoint) {
         system_symbol = system;
         waypoint_symbol = waypoint;
-        notcute::log_debug(fmt::format("set_symbols {} {}", system, waypoint));
+        notcute::log_debug("set_symbols {} {}", system, waypoint);
         set_title(waypoint_symbol);
         ui.available_ships_list->clear();
         request_data();
@@ -179,7 +180,13 @@ public:
     }
 
     void request_data() override {
-        auto x = api.getSystemWaypoints(system_symbol,{}, 20, {}, {std::string("SHIPYARD")})
+        auto traits = std::make_shared<models::WaypointTraitSymbol>();
+        traits->setValue(models::WaypointTraitSymbol::eWaypointTraitSymbol::WaypointTraitSymbol_SHIPYARD);
+        // boost::optional<std::shared_ptr<WaypointTrait>> traitsopt = {traits};
+        std::string tst = api::ApiClient::parameterToString(traits);
+        notcute::log_debug("TRAITS={}, {}", tst, "SHIPYARD");
+        // auto x = api.getSystemWaypoints(system_symbol,{}, 20, {}, {std::string("SHIPYARD")})
+        auto x = api.getSystemWaypoints(system_symbol,{}, 20, {}, {traits})
            .then([this](auto task){
                    API_ERROR_GUARD_START
                    auto waypoints = task.get()->getData();

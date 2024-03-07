@@ -12,7 +12,7 @@
 #include <CppRestOpenAPIClient/api/DefaultApi.h>
 
 #include "notcute/include/notcute/logger.hpp"
-#include "sptr_api.h"
+#include <sptr/api.h>
 
 
 class UserListWidgetItem : public notcute::ListItem {
@@ -144,7 +144,7 @@ public:
             auto task = api.r_register(request);
             task.wait();
             auto new_agent = task.get()->getData();
-            // notcute::log_debug(fmt::format("NEW USER RESP: {}", new_agent->toJson().serialize()));
+            // notcute::log_debug("NEW USER RESP: {}", new_agent->toJson().serialize());
 
             sptr::User newUser;
             newUser.name = new_agent->getAgent()->getSymbol();
@@ -155,7 +155,7 @@ public:
             return &sptr::get_users().back();
         }
         catch(const std::exception& e){
-            notcute::log_debug(e.what());
+            notcute::log_debug("{}", e.what());
         }
         return nullptr;
     }

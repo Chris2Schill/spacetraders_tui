@@ -8,7 +8,7 @@
 
 #include "CppRestOpenAPIClient/ApiException.h"
 #include "notcute/widget.hpp"
-#include "sptr_api.h"
+#include <sptr/api.h>
 #include "events.h"
 #include "help_menu.hpp"
 #include "util.h"
@@ -111,7 +111,7 @@ public:
 
         item_hovered.connect([this](notcute::ListItem* item){
                 ContractPtr contract = notcute::list_widget_item_t_get_item<ContractPtr>(item);
-                notcute::log_debug("selected contract! " + contract->getId());
+                notcute::log_debug("selected contract! {}", contract->getId());
                 content_pane->set_contract(contract);
             });
     }
@@ -123,7 +123,7 @@ public:
                 contracts = payload_event->get_payload();
                 clear();
                 for (ContractPtr c : contracts) {
-                    notcute::log_debug(c->toJson().serialize());
+                    notcute::log_debug("{}", c->toJson().serialize());
                     auto item = new ContractListItem(c);
                     add_item(item);
                 }

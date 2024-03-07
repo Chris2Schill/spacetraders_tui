@@ -5,7 +5,7 @@
 #include <notcute/main_window.hpp>
 #include "main_menu.hpp"
 #include "dashboard.hpp"
-#include "sptr_api.h"
+#include <sptr/api.h>
 
 
 

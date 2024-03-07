@@ -17,18 +17,22 @@ endif()
 
 #TODO fix this properly by adding an install to BSI libraries
 
+add_subdirectory(entt)
 add_subdirectory(spacetraders-sdk)
+add_subdirectory(glm)
+add_subdirectory(engine)
+add_subdirectory(core)
 add_subdirectory(notcute)
+add_subdirectory(gui)
 
-set(SOURCES
-    main.cpp
-    sptr_api.cpp
-)
+# set(SOURCES
+#     main.cpp
+# )
 
 find_package(spdlog REQUIRED)
 
-add_executable(spacetraders ${SOURCES})
-target_link_libraries(spacetraders PRIVATE notcute CppRestOpenAPIClient spdlog::spdlog)
-target_link_directories(spacetraders PRIVATE /usr/local/lib)
-
+# add_executable(spacetraders ${SOURCES})
+# target_link_libraries(spacetraders PRIVATE notcute CppRestOpenAPIClient spdlog::spdlog sptr_core)
+# target_link_directories(spacetraders PRIVATE /usr/local/lib)
+#
 configure_file("users.ini" "${CMAKE_BINARY_DIR}")

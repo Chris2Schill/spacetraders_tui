@@ -4,7 +4,7 @@
 #include <CppRestOpenAPIClient/api/AgentsApi.h>
 
 #include "notcute/widget.hpp"
-#include "sptr_api.h"
+#include <sptr/api.h>
 #include "events.h"
 #include "util.h"
 
@@ -76,7 +76,7 @@ public:
             case sptr::PAYLOAD_EVENT: {
                 auto payload_event = static_cast<PayloadEvent<Agent>*>(e);
                 my_agent = payload_event->get_payload();
-                notcute::log_debug(my_agent->toJson().serialize());
+                notcute::log_debug("{}", my_agent->toJson().serialize());
                 content_pane->set_agent(my_agent);
                 redraw();
                 return true;
