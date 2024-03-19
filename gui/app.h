@@ -29,8 +29,11 @@
 #    include <arpa/inet.h>
 #endif
 
+#define GLFW_EXPOSE_NATIVE_X11 1
 #include "layer.h"
 #include "glfw_opengl_imgui_layer.h"
+
+// #include <GLFW/glfw3native.h>
 
 
 class Application
@@ -51,6 +54,11 @@ public:
 
     static Application& get() { return *instance; }
     static Application* get_instance() { return instance; }
+
+    int get_target_fps() { return targetFps; }
+    double get_timestep() const;
+
+    static GLFWwindow* getWindow() { return ImGuiLayer::sWin; }
 
 protected:
     std::string name;

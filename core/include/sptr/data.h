@@ -1,5 +1,6 @@
 #pragma once
 
+#include <entt/entt.hpp>
 #include <thread>
 #include <variant>
 #include <vector>
@@ -10,29 +11,33 @@
 #include <CppRestOpenAPIClient/api/SystemsApi.h>
 
 #include "CppRestOpenAPIClient/model/Extract_resources_request.h"
+#include "CppRestOpenAPIClient/model/Navigate_ship_200_response_data.h"
 #include "CppRestOpenAPIClient/model/Navigate_ship_request.h"
 #include "CppRestOpenAPIClient/model/SellCargoRequest.h"
 #include "CppRestOpenAPIClient/model/ShipNavRoute.h"
 #include "events.h"
 #include "sptr.h"
+#include <engine/core/base.h>
+#include <engine/scene/components.h>
+#include <engine/scene/entity.h>
+#include <engine/scene/scene.h>
 
 #define API_ERROR_GUARD_START try {
-#define API_ERROR_GUARD_END                                                    \
-    }                                                                          \
-    catch (const api::ApiException& ex) {                                      \
-        notcute::log_debug("{}", ex.what());                                   \
-        sptr::event_bus::Dispatcher::getInstance().post(                       \
-            sptr::event::LogEvent{ex.what()});                                 \
-        auto ss =                                                              \
-            std::dynamic_pointer_cast<std::stringstream>(ex.getContent());     \
-        if (nullptr != ss) {                                                   \
-            notcute::log_debug("{}", ss->str());                               \
-            sptr::event_bus::Dispatcher::getInstance().post(                   \
-                sptr::event::LogEvent{ss->str()});                             \
-        }                                                                      \
+#define API_ERROR_GUARD_END                                                                                            \
+    }                                                                                                                  \
+    catch (const api::ApiException& ex) {                                                                              \
+        notcute::log_debug("{}", ex.what());                                                                           \
+        sptr::event_bus::Dispatcher::getInstance().post(sptr::event::LogEvent{ex.what()});                             \
+        auto ss = std::dynamic_pointer_cast<std::stringstream>(ex.getContent());                                       \
+        if (nullptr != ss) {                                                                                           \
+            notcute::log_debug("{}", ss->str());                                                                       \
+            sptr::event_bus::Dispatcher::getInstance().post(sptr::event::LogEvent{ss->str()});                         \
+        }                                                                                                              \
     }
 
 namespace sptr {
+
+    inline static const glm::vec3 UNIVERSE_SCALE = {10.f, 10.f, 10.f};
 
 inline std::vector<std::string> tokenize(const std::string& str, char delim) {
     std::vector<std::string> tokens;
@@ -56,8 +61,7 @@ inline std::vector<User> load_users() {
         u.name = section;
         u.token = data.get("token");
 
-        std::transform(u.name.begin(), u.name.end(), u.name.begin(),
-                       [](unsigned char c) { return std::toupper(c); });
+        std::transform(u.name.begin(), u.name.end(), u.name.begin(), [](unsigned char c) { return std::toupper(c); });
 
         users.push_back(u);
     }
@@ -93,21 +97,36 @@ using MarketTradeGood = std::shared_ptr<api::MarketTradeGood>;
 using MarketTransaction = std::shared_ptr<api::MarketTransaction>;
 using TradeGood = std::shared_ptr<api::TradeGood>;
 
+struct ShipComponent {
+    std::shared_ptr<models::Ship> ship;
+    double flight_time = 0;
+};
+struct WaypointComponent {
+    std::shared_ptr<models::Waypoint> waypoint;
+};
+
 struct GameState {
+    Ref<Scene> scene = create_ref<Scene>();
+
+    struct Entities {
+        std::unordered_map<std::string, Entity> ships;
+        std::unordered_map<std::string, Entity> waypoints;
+    } entities;
+
     std::vector<User> users;
     const User* active_user;
     Agent my_agent;
     Contracts pending_contracts;
     Contracts active_contracts;
     Ships ships;
-    Waypoints waypoints;
     int waypointsCombo = 0;
 
     struct Selection {
-        Ship ship = nullptr;
-        Waypoint waypoint = nullptr;
+        Entity ship;
+        Entity waypoint;
         Shipyard shipyard = nullptr;
         Market market = nullptr;
+
     } selected;
 
     GameState() {
@@ -120,20 +139,27 @@ struct GameState {
         sptr::set_user(*active_user);
     }
 
+    sptr::Ship get_selected_ship() {
+        if (selected.ship) {
+            return selected.ship.getComponent<ShipComponent>().ship;
+        }
+        return nullptr;
+    }
+
+    void set_selected_ship(Ship ship) { selected.ship = entities.ships.at(ship->getSymbol()); }
+
+    Waypoint get_waypoint(const std::string& waypointSymbol) {
+        auto iter = entities.waypoints.find(waypointSymbol);
+        if (iter != entities.waypoints.end()) {
+            return iter->second.getComponent<WaypointComponent>().waypoint;
+        }
+        return nullptr;
+    }
+
     inline static GameState* gs_instance = nullptr;
     inline static GameState& instance() { return *gs_instance; }
     inline static std::vector<User>& get_users() { return gs_instance->users; }
 };
-
-inline Waypoint get_waypoint(const Ship& ship) {
-    GameState& gs = GameState::instance();
-    for (auto wp : gs.waypoints) {
-        if (wp->getSymbol() == ship->getNav()->getWaypointSymbol()) {
-            return wp;
-        }
-    }
-    return nullptr;
-}
 
 struct DataProvider {
     inline static DataProvider* dp_instance = nullptr;
@@ -141,8 +167,7 @@ struct DataProvider {
 
     struct apis {
         ::api::AgentsApi agents = ::api::AgentsApi(sptr::get_api_client());
-        ::api::ContractsApi contracts =
-            ::api::ContractsApi(sptr::get_api_client());
+        ::api::ContractsApi contracts = ::api::ContractsApi(sptr::get_api_client());
         ::api::SystemsApi systems = ::api::SystemsApi(sptr::get_api_client());
         ::api::FleetApi fleet = ::api::FleetApi(sptr::get_api_client());
     } apis;
@@ -155,6 +180,7 @@ struct DataProvider {
         bus.subscribe<Ships>(this, &DataProvider::receive_ships);
         bus.subscribe<Shipyard>(this, &DataProvider::receive_shipyard);
         bus.subscribe<Market>(this, &DataProvider::receive_marketplace);
+        bus.subscribe<Ref<models::Navigate_ship_200_response_data>>(this, &DataProvider::receive_ship_navigate_success);
     }
 
     void remote_data_load_init() {
@@ -164,8 +190,7 @@ struct DataProvider {
     }
 
     void request_agent() {
-        sptr::event_bus::Dispatcher::getInstance().post(
-            sptr::event::LogEvent{"Request agents"});
+        sptr::event_bus::Dispatcher::getInstance().post(sptr::event::LogEvent{"Request agents"});
         apis.agents.getMyAgent().then([this](auto x) {
             API_ERROR_GUARD_START
             auto agent = x.get()->getData();
@@ -208,24 +233,20 @@ struct DataProvider {
     }
 
     static const int FIRST_PAGE = 1;
-    void request_waypoints(
-        const std::string& system_symbol,
-        boost::optional<std::shared_ptr<models::WaypointTraitSymbol>> traits =
-            {},
-        int page = FIRST_PAGE) {
+    void request_waypoints(const std::string& system_symbol,
+                           boost::optional<std::shared_ptr<models::WaypointTraitSymbol>> traits = {},
+                           int page = FIRST_PAGE) {
 
-        sptr::event_bus::Dispatcher::getInstance().post(event::LogEvent{
-            fmt::format("Requesting System Waypoints Page {}", page)});
+        sptr::event_bus::Dispatcher::getInstance().post(
+            event::LogEvent{fmt::format("Requesting System Waypoints Page {}", page)});
 
-        if (page == FIRST_PAGE &&
-            sptr::MAIN_THREAD_ID == std::this_thread::get_id()) {
-            gs->waypoints.clear();
-        }
+        // if (page == FIRST_PAGE &&
+        //     sptr::MAIN_THREAD_ID == std::this_thread::get_id()) {
+        //     gs->waypoints.clear();
+        // }
 
         static const int ITEMS_PER_PAGE = 20;
-        auto x = apis.systems
-                     .getSystemWaypoints(system_symbol, page, ITEMS_PER_PAGE,
-                                         {}, traits)
+        auto x = apis.systems.getSystemWaypoints(system_symbol, page, ITEMS_PER_PAGE, {}, traits)
                      .then([this, system_symbol, traits, page](auto task) {
                          API_ERROR_GUARD_START
                          auto waypoints = task.get()->getData();
@@ -239,10 +260,22 @@ struct DataProvider {
     }
 
     void receive_waypoints(const Waypoints& waypoints) {
-        for (auto wp : waypoints) {
-            // const std::string& symbol = wp->getSymbol();
-            // auto tokens = tokenize(symbol, '-');
-            gs->waypoints.push_back(wp);
+        for (const auto& wp : waypoints) {
+
+            auto iter = gs->entities.waypoints.find(wp->getSymbol());
+            if (iter == gs->entities.waypoints.end()) {
+
+                Entity e = gs->scene->createEntity(wp->getSymbol());
+                e.addComponent<WaypointComponent>(wp);
+                auto& tf = e.getComponent<TransformComponent>();
+                tf.translation = glm::vec3(wp->getX(), wp->getY(), 0);
+                tf.translation *= sptr::UNIVERSE_SCALE;
+                gs->entities.waypoints.insert({wp->getSymbol(), e});
+                continue;
+            }
+
+            Entity& waypoint_entity = iter->second;
+            waypoint_entity.getComponent<WaypointComponent>().waypoint = wp;
         }
     }
 
@@ -255,16 +288,24 @@ struct DataProvider {
             API_ERROR_GUARD_END
         });
     }
+
     void receive_ships(const Ships& ships) {
-        if (gs->selected.ship) {
-            for (auto& s : ships) {
-                if (s->getSymbol() == gs->selected.ship->getSymbol()) {
-                    gs->selected.ship = s;
-                    break;
-                }
+        for (const auto& ship : ships) {
+
+            auto iter = gs->entities.ships.find(ship->getSymbol());
+            if (iter == gs->entities.ships.end()) {
+
+                Entity e = gs->scene->createEntity(ship->getSymbol());
+                e.addComponent<ShipComponent>(ship);
+
+                e.getComponent<TransformComponent>().translation = glm::vec3();
+                gs->entities.ships.insert({ship->getSymbol(), e});
+                continue;
             }
+
+            Entity& ship_entity = iter->second;
+            ship_entity.getComponent<ShipComponent>().ship = ship;
         }
-        gs->ships = ships;
     }
 
     void request_orbit(const Ships& ships) {
@@ -295,8 +336,7 @@ struct DataProvider {
         //     std::ceil(ship->getFuel()->getConsumed()->getAmount() / 100.0f));
         req->setUnits(ship->getFuel()->getConsumed()->getAmount());
 
-        std::string msg =
-            fmt::format("Request refuel ({} units)", req->getUnits());
+        std::string msg = fmt::format("Request refuel ({} units)", req->getUnits());
         sptr::event_bus::Dispatcher::getInstance().post(event::LogEvent{msg});
 
         apis.fleet.refuelShip(ship->getSymbol(), req).then([this](auto task) {
@@ -307,58 +347,59 @@ struct DataProvider {
         });
     }
 
-    template <typename Waypoint>
-    void request_ship_navigate_to_waypoint(const Ships& ships,
-                                           const Waypoint& wp) {
+    template <typename Waypoint> void request_ship_navigate_to_waypoint(const Ships& ships, const Waypoint& wp) {
         for (auto& s : ships) {
             auto req = std::make_shared<models::Navigate_ship_request>();
             req->setWaypointSymbol(wp->getSymbol());
-            apis.fleet.navigateShip(s->getSymbol(), {req}).then([](auto task) {
+            apis.fleet.navigateShip(s->getSymbol(), {req}).then([this, s](auto task) {
                 API_ERROR_GUARD_START
-                task.get()->getData();
+                auto response = task.get()->getData();
+                event_queue2.push([this, s]() {
+                    std::cout << "RESET FLIGHT TIME\n";
+                    request_ships();
+                    gs->entities.ships.at(s->getSymbol()).getComponent<ShipComponent>().flight_time = 0;
+                });
                 API_ERROR_GUARD_END
             });
         }
-        request_ships();
     }
 
+    void receive_ship_navigate_success(const Ref<models::Navigate_ship_200_response_data>& e) {}
+
     void request_shipyard(const Waypoint& wp) {
-        sptr::event_bus::Dispatcher::getInstance().post(
-            event::LogEvent{"Requesting Shipyard"});
-        apis.systems.getShipyard(wp->getSystemSymbol(), wp->getSymbol())
-            .then([this](auto task) {
-                API_ERROR_GUARD_START
-                auto shipyard = task.get()->getData();
-                std::scoped_lock lock(mtx);
-                event_queue.push(shipyard);
-                API_ERROR_GUARD_END
-            });
+        sptr::event_bus::Dispatcher::getInstance().post(event::LogEvent{"Requesting Shipyard"});
+        apis.systems.getShipyard(wp->getSystemSymbol(), wp->getSymbol()).then([this](auto task) {
+            API_ERROR_GUARD_START
+            auto shipyard = task.get()->getData();
+            std::scoped_lock lock(mtx);
+            event_queue.push(shipyard);
+            API_ERROR_GUARD_END
+        });
     }
     void receive_shipyard(const Shipyard& sy) { gs->selected.shipyard = sy; }
 
     void request_ship_extract(const Ship& ship) {
         auto req = std::make_shared<models::Extract_resources_request>();
-        apis.fleet.extractResources(ship->getSymbol(), req).then([](auto task) {
+        apis.fleet.extractResources(ship->getSymbol(), req).then([this](auto task) {
             API_ERROR_GUARD_START
             task.get()->getData();
+            request_ships();
             API_ERROR_GUARD_END
         });
     }
 
     void request_marketplace(const Waypoint& wp) {
-        apis.systems.getMarket(wp->getSystemSymbol(), wp->getSymbol())
-            .then([this](auto task) {
-                API_ERROR_GUARD_START
-                auto market = task.get()->getData();
-                std::scoped_lock lock(mtx);
-                event_queue.push(market);
-                API_ERROR_GUARD_END
-            });
+        apis.systems.getMarket(wp->getSystemSymbol(), wp->getSymbol()).then([this](auto task) {
+            API_ERROR_GUARD_START
+            auto market = task.get()->getData();
+            std::scoped_lock lock(mtx);
+            event_queue.push(market);
+            API_ERROR_GUARD_END
+        });
     }
     void receive_marketplace(const Market& mp) { gs->selected.market = mp; }
 
-    void request_sell_cargo(const Ship& ship, const ShipCargoItem& item,
-                            int amount) {
+    void request_sell_cargo(const Ship& ship, const ShipCargoItem& item, int amount) {
         auto req = std::make_shared<models::SellCargoRequest>();
         req->setSymbol(item->getSymbol());
         req->setUnits(amount);
@@ -369,8 +410,7 @@ struct DataProvider {
         });
     }
 
-    void request_purchase_ship(const std::string& waypointSymbol,
-                               const ShipyardShip& ship) {
+    void request_purchase_ship(const std::string& waypointSymbol, const ShipyardShip& ship) {
         auto req = std::make_shared<models::Purchase_ship_request>();
         req->setWaypointSymbol(waypointSymbol);
         req->setShipType(ship->getType());
@@ -389,15 +429,25 @@ struct DataProvider {
                 event_queue.pop();
             }
         }
+
+        if (!event_queue2.empty()) {
+            std::scoped_lock lock(mtx);
+            while (!event_queue2.empty()) {
+                auto& foo = event_queue2.front();
+                foo();
+                event_queue2.pop();
+            }
+        }
     }
 
     sptr::event_bus::Dispatcher bus;
-    using Event =
-        std::variant<Agent, Contracts, Waypoints, Ships, Shipyard, Market>;
+    using Event = std::variant<Agent, Contracts, Waypoints, Ships, Shipyard, Market,
+                               Ref<models::Navigate_ship_200_response_data>>;
 
     GameState* gs = nullptr;
     std::mutex mtx;
     std::queue<Event> event_queue;
+    std::queue<std::function<void()>> event_queue2;
 };
 
 } // namespace sptr

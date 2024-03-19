@@ -36,6 +36,7 @@
 #if defined(IMGUI_IMPL_OPENGL_ES2)
 #include <GLES2/gl2.h>
 #endif
+#include <GL/glew.h>
 #include <GLFW/glfw3.h> // Will drag system OpenGL headers
 
 // [Win32] Our example includes a copy of glfw3.lib pre-compiled with VS2010 to maximize ease of testing and compatibility with old VS compilers.
@@ -65,6 +66,8 @@ public:
     float windowHeight = 600;
     float windowPosX = 100;
     float windowPosY = 100;
+
+    static GLFWwindow* sWin;
 
 private:
 	void embraceTheDarkness();

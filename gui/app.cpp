@@ -163,6 +163,11 @@ void Application::run_fixed_timestep()
     }
 }
 
+double Application::get_timestep() const {
+    auto dt = std::chrono::microseconds(static_cast<int>(1000000.0 / targetFps));
+    return std::chrono::duration_cast<std::chrono::duration<double>>(dt).count();
+}
+
 void Application::setWindowPos(int x, int y)
 {
     imguiLayer.setWindowPos(x,y);

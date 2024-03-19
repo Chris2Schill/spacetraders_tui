@@ -30,6 +30,8 @@
 #include <notcute/logger.hpp>
 
 
+GLFWwindow* ImGuiLayer::sWin = nullptr;
+
 static void* onIniSettingsReadOpen(ImGuiContext* context, ImGuiSettingsHandler* handler, const char* name)
 {
     ImGuiID id = ImHashStr(name);
@@ -137,6 +139,7 @@ void ImGuiLayer::init()
 
     // Create window with graphics context
     window = glfwCreateWindow(500, 600, name.c_str(), nullptr, nullptr);
+    sWin = window;
     if (window == nullptr)
     {
         notcute::log_error("Failed to create window");
