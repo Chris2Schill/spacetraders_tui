@@ -8,6 +8,7 @@ class Entity;
 
 class Scene {
 public:
+    Scene();
 
     void renderScene(/*Camera*/){}
 
@@ -15,6 +16,12 @@ public:
     Entity createEntity(const std::string& name);
 
     Entity getPrimaryCameraEntity();
+
+
+    template<typename... Components>
+    auto view() {
+        return registry.view<Components...>();
+    }
 
     friend class Entity;
 

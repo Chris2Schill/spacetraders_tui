@@ -2,7 +2,6 @@
 
 #if defined(__x86_64__)
     #include <GL/glew.h>
-
 #elif defined(__arm__)
     #include <GLES2/gl2.h>
     #include <GLES2/gl2ext.h>

@@ -1,6 +1,7 @@
 #pragma once
 
-#include "engine/renderer/vertex_array.h"
+#include "engine/core/base.h"
+#include "engine/renderer/x86_64/vertex_array.h"
 #include <glm/glm.hpp>
 
 class RendererAPI

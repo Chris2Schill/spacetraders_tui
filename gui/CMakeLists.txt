@@ -21,7 +21,9 @@
 # ==========================================================================
 cmake_minimum_required(VERSION 3.2)
 
-project(sptr)
+project(gui)
+
+add_subdirectory(SFML)
 
 find_package(glfw3 REQUIRED)
 
@@ -33,7 +35,7 @@ set(SOURCES
 find_package(OpenGL REQUIRED)
 
 add_library(imgui_app STATIC ${SOURCES})
-target_compile_definitions(imgui_app PRIVATE -DIMGUI_IMPL_OPENGL_LOADER_GLFW -DIMGUI_FREETYPE_ENABLE)
+target_compile_definitions(imgui_app PRIVATE -DIMGUI_IMPL_OPENGL_LOADER_GLFW -DIMGUI_FREETYPE_ENABLE sfml_graphics)
 target_link_libraries(imgui_app PUBLIC imgui glfw OpenGL::GL util)
 target_include_directories(imgui_app PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -50,10 +52,17 @@ else()
 endif()
 
 add_subdirectory(imgui-docking)
+set(IMGUI_DIR ${CMAKE_CURRENT_SOURCE_DIR}/imgui-docking)
+add_subdirectory(imgui-sfml)
 
-add_executable(sptr sptr.cpp )
+# add_executable(sptr2 sptr_gui.cpp )
+# target_link_options(sptr2 PRIVATE ${SUBSYSTEM_LINKER_OPTIONS})
+# target_link_libraries(sptr2 PRIVATE imgui_app notcute sptr_core game_engine sfml-graphics ImGui-SFML::ImGui-SFML)
+
+
+add_executable(sptr sptr_sfml.cpp layers/map.cpp)
 target_link_options(sptr PRIVATE ${SUBSYSTEM_LINKER_OPTIONS})
-target_link_libraries(sptr PRIVATE imgui_app notcute sptr_core game_engine)
+target_link_libraries(sptr PRIVATE imgui_app notcute sptr_core game_engine sfml-graphics ImGui-SFML::ImGui-SFML)
 
 # configure_file(compact.ini ${CMAKE_CURRENT_BINARY_DIR}/imgui.ini COPYONLY)
 

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "engine/renderer/gl_multiarch.h"
 #include "engine/core/base.h"
 #include "engine/renderer/renderer_api.h"
 

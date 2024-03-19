@@ -43,6 +43,8 @@ struct TransformComponent{
             * rotation
             * glm::scale(glm::mat4(1.0f), scale);
     }
+
+    const glm::vec3& getPosition() { return translation; }
 };
 
 template<typename... Args>

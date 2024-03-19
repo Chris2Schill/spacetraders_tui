@@ -36,7 +36,7 @@ void SceneCamera::RecalculateProjection()
 {
     if (m_ProjectionType == ProjectionType::Perspective)
     {
-        projection = glm::perspective(m_PerspectiveFOV, m_AspectRatio, m_PerspectiveNear, m_PerspectiveFar);
+        m_Projection = glm::perspective(m_PerspectiveFOV, m_AspectRatio, m_PerspectiveNear, m_PerspectiveFar);
     }
     else
     {
@@ -45,7 +45,7 @@ void SceneCamera::RecalculateProjection()
         float orthoBottom = -m_OrthographicSize * 0.5f;
         float orthoTop = m_OrthographicSize * 0.5f;
 
-        projection = glm::ortho(orthoLeft, orthoRight,
+        m_Projection = glm::ortho(orthoLeft, orthoRight,
             orthoBottom, orthoTop, m_OrthographicNear, m_OrthographicFar);
     }
     

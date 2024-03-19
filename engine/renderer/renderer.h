@@ -1,30 +1,59 @@
 #pragma once
 
-#include "engine/renderer/render_command.h"
+#include "gl_multiarch.h"
 
-#include "engine/renderer/orthographic_camera.h"
-#include "engine/renderer/shader.h"
-#include "engine/renderer/vertex_array.h"
+#if defined(__x86_64__)
+#include "x86_64/framebuffer.h"
+#include "x86_64/vertex_array.h"
+#elif defined(__arm__)
+#include "arm/framebuffer.h"
+#include "arm/vertex_array.h"
+#endif
+#include "index_buffer.h"
+#include "shader.h"
+#include "vertex.h"
+#include "vertex_buffer.h"
+#include "vertex_buffer_layout.h"
+#include "camera.h"
+#include "engine/core/base.h"
 
-class Renderer
-{
-public:
-    static void Init();
-    static void Shutdown();
-    
-    static void OnWindowResize(uint32_t width, uint32_t height);
+extern std::string OPENGL_VERSION;
 
-    static void BeginScene(OrthographicCamera& camera);
-    static void EndScene();
 
-    static void Submit(const Ref<Shader>& shader, const Ref<VertexArray>& vertexArray, const glm::mat4& transform = glm::mat4(1.0f));
+struct Renderer {
 
-    static RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
-private:
-    struct SceneData
-    {
+    void clear();
+    void draw(const VertexArray& va, const IndexBuffer& ib, const Shader& shader);
+    void drawTriangleStrip(const VertexArray& va, const IndexBuffer& ib, const Shader& shader);
+    void drawTriangleFan(const VertexArray& va, const IndexBuffer& ib, const Shader& shader);
+    void drawLines(const VertexArray& va, const IndexBuffer& ib, const Shader& shader);
+    void drawLineStrip(const VertexArray& va, const IndexBuffer& ib, const Shader& shader);
+    void beginDefiningStencil();
+    void endDefiningStencil();
+    void setStencilAsInclusionMask();
+    void setStencilAsExclusionMask();
+    void clearStencil();
+
+    void pushStencilRegion();
+    void endStencilRegion();
+    void popStencilRegion();
+
+    Shader& getBasicShader();
+    Shader& getTextShader();
+    Shader& getTextureShader();
+
+    void pushFramebuffer(const Framebuffer*);
+    void popFramebuffer();
+
+
+    static void beginScene(Camera& camera);
+
+    struct SceneData {
         glm::mat4 ViewProjectionMatrix;
+        Ref<VertexArray> quads;
     };
 
-    static Scope<SceneData> s_SceneData;
+    inline static SceneData s_SceneData;
+
+    inline static const std::string RESOURCE_DIR = "/resources";
 };

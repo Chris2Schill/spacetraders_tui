@@ -1,42 +1,75 @@
 #pragma once
 
+#include <string>
 #include <unordered_map>
+#include <memory>
+#include <vector>
 #include <glm/ext/matrix_float4x4.hpp>
-#include "engine/core/base.h"
+
+extern const std::string SHADER_DIR;
 
 class Shader
 {
+    static unsigned int currentRendererId_;
+
 public:
-    virtual ~Shader() = default;
+    struct ShaderFile
+    {
+        const int type;
+        const std::string filepath;
+        ShaderFile(const int shaderType, const std::string shaderFilepath)
+            : type(shaderType),
+            filepath(shaderFilepath)
+        {}
+    };
 
-    virtual void Bind() const = 0;
-    virtual void Unbind() const = 0;
+    class Builder
+    {
+    public:
+        Builder(const std::string& glslVersion);
+        Builder& vertexShader(const std::string filename);
+        Builder& geometryShader(const std::string filename);
+        Builder& fragmentShader(const std::string filename);
+        Shader build();
 
-    virtual void SetInt(const std::string& name, int value) = 0;
-    virtual void SetIntArray(const std::string& name, int* values, uint32_t count) = 0;
-    virtual void SetFloat(const std::string& name, float value) = 0;
-    virtual void SetFloat2(const std::string& name, const glm::vec2& value) = 0;
-    virtual void SetFloat3(const std::string& name, const glm::vec3& value) = 0;
-    virtual void SetFloat4(const std::string& name, const glm::vec4& value) = 0;
-    virtual void SetMat4(const std::string& name, const glm::mat4& value) = 0;
 
-    virtual const std::string& GetName() const = 0;
+    private:
 
-    static Ref<Shader> Create(const std::string& filepath);
-    static Ref<Shader> Create(const std::string& name, const std::string& vertexSrc, const std::string& fragmentSrc);
-};
+        unsigned int compileShaders(std::vector<ShaderFile>& shaders);
+        unsigned int compileShader(unsigned int type, std::vector<const char*>& sources);
+        void link(Shader& program);
 
-class ShaderLibrary
-{
-public:
-    void Add(const std::string& name, const Ref<Shader>& shader);
-    void Add(const Ref<Shader>& shader);
-    Ref<Shader> Load(const std::string& filepath);
-    Ref<Shader> Load(const std::string& name, const std::string& filepath);
+        const std::string glslVersion_;
 
-    Ref<Shader> Get(const std::string& name);
+        std::vector<ShaderFile> vertexShaders_;
+        std::vector<ShaderFile> fragmentShaders_;
+        std::vector<ShaderFile> geometryShaders_;
+    };
 
-    bool Exists(const std::string& name) const;
+    Shader();
+    Shader(unsigned int rendererId);
+    ~Shader();
+
+    static Builder create(const std::string& glslVersion) { return Builder(glslVersion); }
+
+    void bind() const;
+    void unbind() const;
+    void destroy() const;
+    void setUniform1i(const std::string& name, int v0);
+    void setUniform1f(const std::string& name, float v0);
+    void setUniform2f(const std::string& name, float v0, float v1);
+    void setUniform3f(const std::string& name, float v0, float v1, float v2);
+    void setUniform4f(const std::string& name, float v0, float v1, float v3, float v4);
+    void setUniformMatrix4fv(const std::string& name, glm::mat4& matrix);
+    void setUniformMatrix3fv(const std::string& name, glm::mat3& matrix);
+    inline unsigned int getRendererId();
+
 private:
-    std::unordered_map<std::string, Ref<Shader>> m_Shaders;
+
+    unsigned int getUniformLocation(const std::string& name);
+
+    unsigned int rendererId_;
+    std::unordered_map<std::string, unsigned int> uniformLocationCache_;
+
 };
+

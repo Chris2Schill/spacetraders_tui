@@ -24,3 +24,10 @@ void IndexBuffer::unbind() const
 {
     GL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
 }
+
+void IndexBuffer::update(const unsigned int * data, unsigned int count)
+{
+    count_ = count;
+    bind();
+    GL_CALL(glBufferData(GL_ELEMENT_ARRAY_BUFFER, count*sizeof(unsigned int), data, GL_STATIC_DRAW));
+}
