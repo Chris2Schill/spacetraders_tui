@@ -3,6 +3,8 @@
 #include "engine/scene/components.h"
 #include "layer.h"
 
+#include "coordinate_conversions.h"
+#include "sptr/data.h"
 #include <SFML/Graphics/CircleShape.hpp>
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/RenderTexture.hpp>
@@ -33,68 +35,6 @@ extern sf::RenderWindow* gRenderWindow;
 //     ImGui::End();
 // }
 
-namespace MouseConversions {
-inline glm::vec2 imguiTosfml(const glm::vec2& pos) { return pos * glm::vec2(0.f, -1.f); }
-} // namespace MouseConversions
-
-inline glm::vec2 fromImVec(const ImVec2 vec) { return {vec.x, vec.y}; }
-
-// enum class coord{
-//     ImGuiScreenSpace,
-//     CameraSpace,
-// };
-
-// Coordinate systems
-struct ImGuiMainWindowSpace {};
-struct ImGuiCurrentSubWindowSpace {};
-struct CameraSpace {};
-struct SpaceTradersUnivserseSpace {};
-
-template <typename T> struct Coord {
-    glm::vec2 pos;
-
-    // void operator+(glm::vec2 v) { pos + v; }
-    Coord<T>& operator+=(const glm::vec2& rhs) { return {pos + rhs}; }
-    Coord<T>& operator-=(const glm::vec2& rhs) { return {pos - rhs}; }
-    Coord<T>& operator*=(const glm::vec2& rhs) { return {pos * rhs}; }
-    Coord<T>& operator/=(const glm::vec2& rhs) { return {pos / rhs}; }
-    friend Coord<T> operator+(Coord<T> lhs, const glm::vec2& v) {
-        lhs += v;
-        return lhs;
-    }
-    friend Coord<T> operator-(Coord<T> lhs, const glm::vec2& v) {
-        lhs -= v;
-        return lhs;
-    }
-    friend Coord<T> operator*(Coord<T> lhs, const glm::vec2& v) {
-        lhs *= v;
-        return lhs;
-    }
-    friend Coord<T> operator/(Coord<T> lhs, const glm::vec2& v) {
-        lhs /= v;
-        return lhs;
-    }
-
-    // Coord(Coord<T>& rhs) { pos = rhs.pos; }
-};
-
-// template <typename From, typename To> Coord<To> convert(From) {
-//     bool mouse_pos_convert_implemented = false;
-//     assert(mouse_pos_convert_implemented);
-// };
-
-inline Coord<ImGuiCurrentSubWindowSpace> toImGuiCurrentWindowSpace(Coord<ImGuiMainWindowSpace> mp) {
-    glm::vec2 min = fromImVec(ImGui::GetWindowContentRegionMin());
-    return {mp.pos - min};
-};
-
-inline Coord<CameraSpace> toSpaceTradersWorldSpace(Coord<ImGuiCurrentSubWindowSpace> mp) {
-    return {mp.pos * glm::vec2(1.f, -1.f)};
-};
-
-// template<>
-// mouse_pos<coordinate_systems
-
 struct MapLayer : public Layer {
     MapLayer() {
         // scale(1.0);
@@ -123,55 +63,61 @@ struct MapLayer : public Layer {
             float x = (rand() % 2000) - 1000;
             float y = (rand() % 2000) - 1000;
 
-            sf::CircleShape star(1.f);
+            sf::CircleShape star(1.f * zoom);
             star.setFillColor(sf::Color::White);
             star.setPosition({x, y});
             stars.push_back(star);
             // fb.draw(dot);
         }
-    }
 
-    void update() {
-        check_dragging();
-        if (ImGui::GetIO().MouseWheel > 0) {
-            view.zoom(0.5);
-        } else if (ImGui::GetIO().MouseWheel < 0) {
-            view.zoom(2);
-        }
+        sptr::get_event_bus()->subscribe<sptr::event::MapCenterOnWaypoint>(
+            this, [this](const sptr::event::MapCenterOnWaypoint& e) {
+                auto wp = sptr::GameState::instance().get_waypoint(e.waypointSymbol);
+                set_screen_center({wp->getX(), wp->getY()});
+            });
     }
 
     void render_ships();
     void render_stars();
     void render_system_center() {
-        sf::CircleShape shape(7.f);
-        shape.setFillColor(sf::Color::Yellow);
-        shape.setPosition({0,0});
-        fb.draw(shape);
+        sf::CircleShape circle(20.f);
+        circle.setFillColor(sf::Color::Yellow);
+        circle.setPosition({0, 0});
+        circle.setOrigin({circle.getRadius(), circle.getRadius()});
+        fb.draw(circle);
     }
 
     float get_text_width(const sf::Text& text) { return 40; }
 
     void render_waypoints();
 
-    glm::vec2 offset() { return pan_amount * glm::vec2(-1.f, -1.f); }
+    glm::vec2 screen_center() { return pan_amount; }
+    void set_screen_center(const glm::vec2& center) { pan_amount = center; }
 
     void render() {
 
         ImGui::Begin("Map");
-        ImGui::Text("Zoom");
-        ImGui::SameLine();
-        if (ImGui::Button("+")) {
-            view.zoom(0.5);
-        }
-        ImGui::SameLine();
-        if (ImGui::Button("-")) {
-            view.zoom(2);
-        }
-        ImGui::SameLine();
-        if (ImGui::Button("Reset")) {
-            reset_zoom();
-        }
-        ImGui::Text((std::to_string(scale.x) + "x").c_str());
+
+        // ImGui::Text("Zoom");
+        // ImGui::SameLine();
+        // if (ImGui::Button("+")) {
+        //     zoom *= 0.5f;
+        // }
+        // ImGui::SameLine();
+        // if (ImGui::Button("-")) {
+        //     zoom *= 2.f;
+        // }
+        // ImGui::SameLine();
+        // if (ImGui::Button("Reset")) {
+        //     reset_zoom();
+        // }
+        // ImGui::Text((std::to_string(scale.x) + "x").c_str());
+
+        ImVec2 dim = ImGui::GetContentRegionAvail();
+        view.setSize(sf::Vector2f{dim.x, dim.y} * zoom);
+        view.setCenter({screen_center().x, screen_center().y});
+        fb.setView(view);
+        fb.setSmooth(true);
 
         fb.clear();
         render_stars();
@@ -180,7 +126,6 @@ struct MapLayer : public Layer {
         render_system_center();
         fb.display();
 
-        ImVec2 dim = ImGui::GetContentRegionAvail();
         if (!fb.create({(unsigned)dim.x, (unsigned)dim.y})) {
             // if (!fb.create({1000,1000})) {
             std::cerr << "Error creating fb texture\n";
@@ -191,7 +136,18 @@ struct MapLayer : public Layer {
         const sf::Texture& tex = fb.getTexture();
         sf::Sprite sprite(tex);
 
+        ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, {0, 0});
+        ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, {0, 0});
         ImGui::Image(sprite);
+        if (ImGui::IsItemHovered()) {
+            check_dragging();
+            if (ImGui::GetIO().MouseWheel > 0) {
+                zoom *= 0.5f;
+            } else if (ImGui::GetIO().MouseWheel < 0) {
+                zoom *= 2.f;
+            }
+        }
+        ImGui::PopStyleVar(2);
 
         ImGui::End();
     }
@@ -205,22 +161,54 @@ struct MapLayer : public Layer {
     //     }
     // }
 
-    void pan(glm::vec2 delta) { pan_amount += delta; }
+    void pan(glm::vec2 delta) { pan_amount += delta * zoom; }
 
     float left();
     float right();
     float top();
     float bottom();
 
-    void reset_zoom() { view.zoom(1); }
-
+    void reset_zoom() { zoom = 1; }
     void check_dragging();
 
-    Coord<CameraSpace> mouse_pos() {
-        Coord<ImGuiMainWindowSpace> mPos_mainWindow{{ImGui::GetIO().MousePos.x, ImGui::GetIO().MousePos.y}};
+    template <typename T> void printCoord(const std::string& name, Coord<T> coord) {
+        ImGui::Text("%s: (%g, %g)", name.c_str(), coord.pos.x, coord.pos.y);
+    }
+
+    void render_mouse_coord_debug_window() {
+        auto min = ImGui::GetWindowContentRegionMin();
+        auto max = ImGui::GetWindowContentRegionMax();
+
+        Coord<ImGuiMainWindowSpace> mPos_mainWindow = mouse_pos();
         Coord<ImGuiCurrentSubWindowSpace> mPos_subwindow = toImGuiCurrentWindowSpace(mPos_mainWindow);
-        Coord<CameraSpace> mPos_world = toSpaceTradersWorldSpace(mPos_subwindow);
-        return mPos_world;
+
+        Coord<ViewSpace> mPos_view = toViewSpace(mPos_subwindow, max.y - min.y);
+        Coord<SystemSpace> mPos_system = toSystemSpace(mPos_view, fb);
+
+        ImGui::Begin("MousePos");
+        if (ImGui::Button("ResetPan")) {
+            pan_amount = {0, 0};
+            zoom = 1;
+        }
+        printCoord("MousePosMainWindowSpace", mPos_mainWindow);
+        printCoord("MousePosCurrentSubWindowSpace", mPos_subwindow);
+        printCoord("MousePosViewSpace", mPos_view);
+        printCoord("MousePosSystemSpace", mPos_system);
+        printCoord("PanAmount", Coord<ViewSpace>{{pan_amount.x, pan_amount.y}});
+        printCoord("ViewSize", Coord<ViewSpace>{{view.getSize().x, view.getSize().y}});
+        printCoord("ViewCenter", Coord<ViewSpace>{{view.getCenter().x, view.getCenter().y}});
+        ImGui::Value("dragging", dragging);
+        ImGui::End();
+    }
+
+    Coord<SystemSpace> mouse_pos_system_space() {
+        Coord<ImGuiMainWindowSpace> mPos_mainWindow = mouse_pos();
+        Coord<ImGuiCurrentSubWindowSpace> mPos_subwindow = toImGuiCurrentWindowSpace(mPos_mainWindow);
+        auto min = ImGui::GetWindowContentRegionMin();
+        auto max = ImGui::GetWindowContentRegionMax();
+        float win_height = max.y - min.y;
+        Coord<ViewSpace> mPos_view = toViewSpace(mPos_subwindow, win_height);
+        return toSystemSpace(mPos_view, fb);
     }
 
     sf::Font font;
@@ -229,13 +217,11 @@ struct MapLayer : public Layer {
     std::vector<sf::CircleShape> stars;
     int dim = 50;
     int cellsize = 10;
-    bool was_dragging = false;
-    Coord<CameraSpace> drag_prev;
+    bool dragging = false;
+    Coord<SystemSpace> drag_prev;
     glm::vec2 pan_amount{0.f, 0.0f};
-    glm::vec2 screen_center{0.f, 0.f};
     glm::vec3 scale{1.f, 1.f, 1.f};
     int64_t mouse_wheel_counter = 0;
     sf::View view;
     float zoom = 1.0f;
-
 };

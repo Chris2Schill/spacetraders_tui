@@ -1,5 +1,7 @@
 project(game_engine)
 
+add_subdirectory(sol2)
+
 find_package(GLEW REQUIRED)
 find_package(glfw3 REQUIRED)
 
@@ -30,6 +32,8 @@ set(SOURCES
     scene/scene.cpp
     scene/entity.cpp
     scene/scene_camera.cpp
+    script_engine/script_engine.cpp
+    script_engine/glm_lua_bindings.cpp
     input/mouse.cpp
     input/filesystem.cpp
     input/keyboard.cpp
@@ -38,8 +42,14 @@ set(SOURCES
 find_package(OpenGL REQUIRED)
 
 add_library(game_engine STATIC ${SOURCES})
-target_link_libraries(game_engine PUBLIC GLEW::glew glfw OpenGL::OpenGL)
+target_link_libraries(game_engine PUBLIC GLEW::glew glfw OpenGL::OpenGL sol2::sol2 lua5.2-c++)
 target_include_directories(game_engine PUBLIC
     ..
     ../entt/single_include
+    /usr/include/lua5.2
 )
+
+# target_include_directories(embedlua PRIVATE /usr/include/lua5.1)
+# target_compile_definitions(embedlua PUBLIC "LUABIND_USE_CXX11")
+# target_link_directories(embedlua PUBLIC /usr/lib/x86_64-linux-gnu)
+# target_link_libraries(embedlua PRIVATE lua5.1-c++ sfml-graphics EnTT::EnTT sol2::sol2)

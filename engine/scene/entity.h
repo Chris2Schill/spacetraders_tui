@@ -1,7 +1,7 @@
 #pragma once
 
 #include <entt/entt.hpp>
-#include "scene.h"
+#include "engine/scene/scene.h"
 #include "components.h"
 
 class Entity {

@@ -15,6 +15,10 @@ namespace event {
     struct LogEvent {
         std::string msg;
     };
+
+    struct MapCenterOnWaypoint {
+        std::string waypointSymbol;
+    };
 }
 
 }

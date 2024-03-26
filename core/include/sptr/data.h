@@ -37,7 +37,7 @@
 
 namespace sptr {
 
-    inline static const glm::vec3 UNIVERSE_SCALE = {10.f, 10.f, 10.f};
+inline static const glm::vec3 UNIVERSE_SCALE = {1.f, 1.f, 1.f};
 
 inline std::vector<std::string> tokenize(const std::string& str, char delim) {
     std::vector<std::string> tokens;
@@ -183,10 +183,31 @@ struct DataProvider {
         bus.subscribe<Ref<models::Navigate_ship_200_response_data>>(this, &DataProvider::receive_ship_navigate_success);
     }
 
-    void remote_data_load_init() {
-        request_agent();
+    void init_ships_and_starting_system() {
+
+        auto agent_request = apis.agents.getMyAgent();
+        auto ships_request = apis.fleet.getMyShips({}, {});
+
+        agent_request.wait();
+        ships_request.wait();
+
+        receive_agent(agent_request.get()->getData());
+        receive_ships(ships_request.get()->getData());
+
+        // load the system of the command ship
+        // TODO: is it safe to assume we always have a command ship?? We start with one but
+        // it may get destroyed or scrapped? Probably should fallback onto a ship
+        for (auto [symbol, entity] : gs->entities.ships) {
+            const ShipComponent& sc = entity.getComponent<ShipComponent>();
+            if (sc.ship->getRegistration()->getRole()->getValue() ==
+                    models::ShipRole::eShipRole::ShipRole_COMMAND) {
+                gs->selected.ship = entity;
+                break;
+            }
+        }
+
+        // request_waypoints();
         request_contracts();
-        request_ships();
     }
 
     void request_agent() {
@@ -259,6 +280,10 @@ struct DataProvider {
                      });
     }
 
+    void register_entity(const Waypoint wp) {
+
+    }
+
     void receive_waypoints(const Waypoints& waypoints) {
         for (const auto& wp : waypoints) {
 
@@ -298,7 +323,7 @@ struct DataProvider {
                 Entity e = gs->scene->createEntity(ship->getSymbol());
                 e.addComponent<ShipComponent>(ship);
 
-                e.getComponent<TransformComponent>().translation = glm::vec3();
+                // e.getComponent<TransformComponent>().translation = glm::vec3();
                 gs->entities.ships.insert({ship->getSymbol(), e});
                 continue;
             }
@@ -438,6 +463,12 @@ struct DataProvider {
                 event_queue2.pop();
             }
         }
+    }
+
+    template<typename Callable>
+    void on_main_thread(Callable&& func) {
+        std::scoped_lock lock(mtx);
+        event_queue2.push(func);
     }
 
     sptr::event_bus::Dispatcher bus;

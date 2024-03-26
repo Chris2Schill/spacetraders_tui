@@ -1,5 +1,8 @@
 #include "map.h"
+#include "SFML/System/Vector3.hpp"
+#include "glm/ext/matrix_projection.hpp"
 #include "imgui.h"
+#include "sptr/data.h"
 #include <sstream>
 
 void MapLayer::render_ships() {
@@ -9,19 +12,13 @@ void MapLayer::render_ships() {
     // offsety = dim.y / 2.0f;
 
     auto view = sptr::GameState::instance().scene->view<TagComponent, sptr::ShipComponent, TransformComponent>();
-    view.each([this, &dim](TagComponent& tag, sptr::ShipComponent& wp, TransformComponent& transform) {
+    view.each([this](TagComponent& tag, sptr::ShipComponent& wp, TransformComponent& transform) {
         glm::vec3 pos = transform.getPosition();
-        // sf::CircleShape shape(10.f);
         sf::Text text(font, tag.tag);
-        // text.setPosition({pos.x + offset().x + 10, pos.y + offset().y + 12});
         text.setPosition({pos.x, pos.y + 12});
         text.setCharacterSize(12);
         text.setScale({1.0, -1.0});
         text.setFillColor(sf::Color::Red);
-        // shape.setFillColor(sf::Color::White);
-        // shape.setPosition({pos.x + offsetx, pos.y + offsety});
-        // std::cout << "Drew entity at " << pos << "\n";
-        // fb.draw(shape);
         fb.draw(text);
     });
 }
@@ -35,84 +32,76 @@ void MapLayer::render_stars() {
 void MapLayer::check_dragging() {
     bool dragging_now = ImGui::IsMouseDragging(ImGuiMouseButton_Left);
 
-    if (!was_dragging && dragging_now) {
+    if (!dragging && dragging_now) {
         // started draggin
-        drag_prev = mouse_pos();
-    } else if (was_dragging && !dragging_now) {
+        drag_prev = mouse_pos_system_space();
+    } else if (dragging && !dragging_now) {
         // stopped draggin
     }
 
     if (dragging_now) {
-        glm::vec2 drag_pan = mouse_pos().pos - drag_prev.pos;
-        screen_center += drag_pan;
-        pan_amount += drag_pan;
+        Coord<SystemSpace> drag_pan = mouse_pos_system_space() - drag_prev;
+        pan(-drag_pan.pos);
     }
 
-    was_dragging = dragging_now;
+    dragging = dragging_now;
 
-    drag_prev = mouse_pos();
+    drag_prev = mouse_pos_system_space();
 }
 
-template <typename T> void printCoord(const std::string& name, Coord<T> coord) {
-    ImGui::Value((name + "X").c_str(), coord.pos.x);
-    ImGui::Value((name + "Y").c_str(), coord.pos.y);
-}
 
 void MapLayer::render_waypoints() {
-    auto& io = ImGui::GetIO();
-    auto min = ImGui::GetWindowContentRegionMin();
-    auto max = ImGui::GetWindowContentRegionMax();
-    min.x += ImGui::GetWindowPos().x;
-    min.y += ImGui::GetWindowPos().y;
 
-    max.x += ImGui::GetWindowPos().x;
-    max.y += ImGui::GetWindowPos().y;
+    render_mouse_coord_debug_window();
 
-    Coord<ImGuiMainWindowSpace> mPos_mainWindow{{ImGui::GetMousePos().x, ImGui::GetMousePos().y}};
-    Coord<ImGuiCurrentSubWindowSpace> mPos_subwindow = toImGuiCurrentWindowSpace(mPos_mainWindow);
-    Coord<CameraSpace> mPos_world = toSpaceTradersWorldSpace(mPos_subwindow);
 
-    glm::vec2 mousePosRegion{io.MousePos.x - min.x, io.MousePos.y - min.y};
+    Coord<SystemSpace> mouse_pos_system = mouse_pos_system_space();
 
-    ImGui::Begin("MousePos");
-    ImGui::Value("MinX", min.x);
-    ImGui::Value("MinY", min.y);
-    ImGui::Value("MaxX", max.x);
-    ImGui::Value("MaxY", max.y);
-    ImGui::Value("mousePosRegionX", mousePosRegion.x);
-    ImGui::Value("mousePosRegionY", mousePosRegion.y);
-    printCoord("MainWindowSpace", mPos_mainWindow);
-    printCoord("CurrentSubWindowSpace", mPos_subwindow);
-    printCoord("CameraSpace", mPos_world);
-    ImGui::Value("was_dragging", was_dragging);
-    ImGui::End();
-
-    ImVec2 dim = ImGui::GetContentRegionAvail();
-    view.setCenter({offset().x, offset().y});
-    fb.setView(view);
-
-    // glm::vec2 total_offset = fromImVec
-    // float total_offset = (dim.x / 2.0f) + offset().x;
-    // offsety = (dim.y / 2.0f) + offset().y;
     auto view = sptr::GameState::instance().scene->view<TagComponent, TransformComponent, sptr::WaypointComponent>();
-    view.each([this, &dim](TagComponent& tag, TransformComponent& transform, sptr::WaypointComponent& wp) {
-        glm::vec3 pos = transform.getPosition();
-        sf::CircleShape shape(3.f);
-        sf::Text text(font, tag.tag);
-        // std::stringstream ss;
-        // ss << "(" << transform.getPosition().x << "," << transform.getPosition().y << ")";
-        // sf::Text text(font, ss.str());
-        // text.setPosition({pos.x + offset().x - get_text_width(text), pos.y + offset().y - 5});
-        text.setPosition({pos.x , pos.y-5});
-        text.setCharacterSize(20);
-        // text.setCharacterSize(12);
-        text.setScale({1.0, -1.0});
-        shape.setFillColor(sf::Color::White);
-        // shape.setPosition({pos.x + offset().x, pos.y + offset().y});
-        shape.setPosition({pos.x, pos.y});
-        // std::cout << "Drew entity at " << pos << "\n";
+    view.each([this, mouse_pos_system](TagComponent& tag, TransformComponent& transform, sptr::WaypointComponent& wp) {
+        Coord<SystemSpace> pos = {{transform.getPosition().x,
+                                   transform.getPosition().y}};
+
+        Coord<SystemSpace> diff = mouse_pos_system - pos;
+        // glm::vec2 diff = glm::vec2(mouse_pos_system.pos.x, mouse_pos_system.pos.y) - glm::vec2(pos.x, pos.y);
+        auto length = glm::length(diff.pos);
+        bool hovered = length < 10 * zoom;
+        auto color = hovered ? sf::Color::Red : sf::Color::Cyan;
+        // std::cout << "DIFF=" << diff << ", Length= " << length << "\n";
+
+        if (ImGui::BeginPopup(tag.tag.c_str())) {
+            if (ImGui::Selectable("Navigate")) {
+                sptr::DataProvider::instance().request_ship_navigate_to_waypoint(
+                    {sptr::GameState::instance().get_selected_ship()}, wp.waypoint);
+            }
+            ImGui::EndPopup();
+        }
+
+        sf::CircleShape shape(4.f * zoom);
+        // shape.setPointCount(3);
+        shape.setFillColor(color);
+        shape.setPosition({pos.pos.x, pos.pos.y});
+        shape.setOrigin({shape.getRadius(), shape.getRadius()});
         fb.draw(shape);
-        fb.draw(text);
+
+        if (hovered) {
+            // hovering the waypoint
+            if (ImGui::IsMouseDown(ImGuiMouseButton_Left)) {
+                ImGui::OpenPopup(tag.tag.c_str());
+                std::cout << "Opening popup\n";
+            }
+
+            sf::Text text(font, tag.tag);
+            // std::stringstream ss;
+            // ss << "(" << transform.getPosition().x << "," << transform.getPosition().y << ")";
+            // sf::Text text(font, ss.str());
+            // text.setPosition({pos.x + offset().x - get_text_width(text), pos.y + offset().y - 5});
+            text.setScale({zoom, -zoom});
+            text.setCharacterSize(20);
+            text.setPosition({pos.pos.x - text.getLocalBounds().getSize().x / 2.f * zoom, pos.pos.y - 5});
+            text.setFillColor(color);
+            fb.draw(text);
+        }
         // fb.display();
     });
 }

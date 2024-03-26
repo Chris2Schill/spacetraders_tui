@@ -11,12 +11,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(SOURCES
     src/api.cpp
+    src/system_data_provider.cpp
 )
 
 find_package(spdlog REQUIRED)
 
 add_library(sptr_core STATIC ${SOURCES})
 target_include_directories(sptr_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_link_libraries(sptr_core PUBLIC CppRestOpenAPIClient spdlog::spdlog)
+target_link_libraries(sptr_core PUBLIC CppRestOpenAPIClient spdlog::spdlog game_engine)
 
 # configure_file("users.ini" "${CMAKE_BINARY_DIR}")

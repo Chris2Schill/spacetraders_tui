@@ -55,18 +55,25 @@ add_subdirectory(imgui-docking)
 set(IMGUI_DIR ${CMAKE_CURRENT_SOURCE_DIR}/imgui-docking)
 add_subdirectory(imgui-sfml)
 
-# add_executable(sptr2 sptr_gui.cpp )
-# target_link_options(sptr2 PRIVATE ${SUBSYSTEM_LINKER_OPTIONS})
-# target_link_libraries(sptr2 PRIVATE imgui_app notcute sptr_core game_engine sfml-graphics ImGui-SFML::ImGui-SFML)
+# add_executable(sptr sptr_gui.cpp layers/map.cpp)
+# target_link_options(sptr PRIVATE ${SUBSYSTEM_LINKER_OPTIONS})
+# target_link_libraries(sptr PRIVATE imgui_app notcute sptr_core game_engine sfml-graphics ImGui-SFML::ImGui-SFML)
 
+set(SOURCES
+    sptr_sfml.cpp
+    layers/map.cpp
+    ../imgui_lua_bindings/imgui_lua_bindings.cpp
+)
 
-add_executable(sptr sptr_sfml.cpp layers/map.cpp)
+add_executable(sptr ${SOURCES})
 target_link_options(sptr PRIVATE ${SUBSYSTEM_LINKER_OPTIONS})
 target_link_libraries(sptr PRIVATE imgui_app notcute sptr_core game_engine sfml-graphics ImGui-SFML::ImGui-SFML)
 
 # configure_file(compact.ini ${CMAKE_CURRENT_BINARY_DIR}/imgui.ini COPYONLY)
 
 # file(COPY ${RESOURCES_DIR}/fonts DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/resources)
+file(COPY scripts DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ../spacetraders-sdk-lua DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 install(IMPORTED_RUNTIME_ARTIFACTS sptr
         RUNTIME_DEPENDENCY_SET sptr

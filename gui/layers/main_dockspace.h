@@ -38,7 +38,6 @@ struct MainDockspaceLayer : public Layer {
         ui_game = std::make_shared<UIGame>();
         sptr::GameState::instance().set_active_user(e.user);
         ui = ui_game;
-        dp.remote_data_load_init();
     }
 
     void update() {

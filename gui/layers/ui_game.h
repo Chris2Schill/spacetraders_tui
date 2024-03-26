@@ -19,16 +19,19 @@
 #include <engine/scene/scene.h>
 
 #include <engine/renderer/renderer.h>
-#include "engine/renderer/vertex.h"
 
 #include <imgui_demo.cpp>
 
 struct UIGame : public Layer {
     UIGame() {
+        scene = create_ref<Scene>();
+
+        sptr::DataProvider::instance().init_ships_and_starting_system();
+
         layers.push_back(std::make_shared<AgentLayer>());
         layers.push_back(std::make_shared<ContractsLayer>());
         layers.push_back(std::make_shared<ShipsLayer>());
-        // layers.push_back(std::make_shared<WaypointsLayer>());
+        layers.push_back(std::make_shared<WaypointsLayer>());
         layers.push_back(std::make_shared<ShipDetailsLayer>());
         layers.push_back(std::make_shared<MapLayer>());
         layers.push_back(std::make_shared<EventLogLayer>());
@@ -95,16 +98,16 @@ struct UIGame : public Layer {
         // ImGui::Begin("SPTR");
         // ImGui::End();
 
-        Entity camera = scene.getPrimaryCameraEntity();
-        if (!camera) {
-            return;
-        }
+        // Entity camera = scene.getPrimaryCameraEntity();
+        // if (!camera) {
+        //     return;
+        // }
 
         // Renderer::beginScene(camera.getComponent<CameraComponent>().camera,
         //                      camera.getComponent<TransformComponent>().getTransform());
     }
 
-    Scene scene;
+    Ref<Scene> scene;
 
   private:
     std::vector<LayerPtr> layers;
