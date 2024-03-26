@@ -1,10 +1,5 @@
 [
 {
-  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build",
-  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -DSPDLOG_COMPILED_LIB -I/home/cschilling/spacetraders/spacetraders_tui/notcute/include -I/home/cschilling/spacetraders/spacetraders_tui/spacetraders-sdk/include -I/home/cschilling/spacetraders/spacetraders_tui/core/include -g -Wall -std=c++20 -o CMakeFiles/spacetraders.dir/main.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/main.cpp",
-  "file": "/home/cschilling/spacetraders/spacetraders_tui/main.cpp"
-},
-{
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/spacetraders-sdk",
   "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -I/home/cschilling/spacetraders/spacetraders_tui/spacetraders-sdk/include -g -fPIC -Wall -Wno-unused-variable -std=c++20 -o CMakeFiles/CppRestOpenAPIClient.dir/src/ApiClient.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/spacetraders-sdk/src/ApiClient.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/spacetraders-sdk/src/ApiClient.cpp"
@@ -911,43 +906,58 @@
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/engine",
-  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/core/uuid.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/core/uuid.cpp",
+  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/core/uuid.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/core/uuid.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/engine/core/uuid.cpp"
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/engine",
-  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/scene/scene.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/scene/scene.cpp",
+  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/scene/scene.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/scene/scene.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/engine/scene/scene.cpp"
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/engine",
-  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/scene/entity.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/scene/entity.cpp",
+  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/scene/entity.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/scene/entity.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/engine/scene/entity.cpp"
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/engine",
-  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/scene/scene_camera.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/scene/scene_camera.cpp",
+  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/scene/scene_camera.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/scene/scene_camera.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/engine/scene/scene_camera.cpp"
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/engine",
-  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/input/mouse.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/input/mouse.cpp",
+  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/script_engine/script_engine.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/script_engine/script_engine.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/engine/script_engine/script_engine.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/engine",
+  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/script_engine/glm_lua_bindings.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/script_engine/glm_lua_bindings.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/engine/script_engine/glm_lua_bindings.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/engine",
+  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/input/mouse.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/input/mouse.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/engine/input/mouse.cpp"
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/engine",
-  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/input/filesystem.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/input/filesystem.cpp",
+  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/input/filesystem.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/input/filesystem.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/engine/input/filesystem.cpp"
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/engine",
-  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/input/keyboard.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/input/keyboard.cpp",
+  "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/game_engine.dir/input/keyboard.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/engine/input/keyboard.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/engine/input/keyboard.cpp"
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/core",
-  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -DSPDLOG_COMPILED_LIB -I/home/cschilling/spacetraders/spacetraders_tui/core/include -I/home/cschilling/spacetraders/spacetraders_tui/spacetraders-sdk/include -g -Wall -std=c++20 -o CMakeFiles/sptr_core.dir/src/api.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/core/src/api.cpp",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -DSPDLOG_COMPILED_LIB -I/home/cschilling/spacetraders/spacetraders_tui/core/include -I/home/cschilling/spacetraders/spacetraders_tui/spacetraders-sdk/include -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/sptr_core.dir/src/api.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/core/src/api.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/core/src/api.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/core",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -DSPDLOG_COMPILED_LIB -I/home/cschilling/spacetraders/spacetraders_tui/core/include -I/home/cschilling/spacetraders/spacetraders_tui/spacetraders-sdk/include -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/sptr_core.dir/src/system_data_provider.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/core/src/system_data_provider.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/core/src/system_data_provider.cpp"
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/notcute",
@@ -1061,18 +1071,518 @@
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui",
-  "command": "/usr/bin/c++ -DIMGUI_FREETYPE_ENABLE -DIMGUI_IMPL_OPENGL_LOADER_GLFW -I/home/cschilling/spacetraders/spacetraders_tui/gui -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/backends -I/include/freetype2 -I/usr/include/freetype2 -g -Wall -std=c++20 -o CMakeFiles/imgui_app.dir/app.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/app.cpp",
+  "command": "/usr/bin/c++ -DIMGUI_FREETYPE_ENABLE -DIMGUI_IMPL_OPENGL_LOADER_GLFW -Dsfml_graphics -I/home/cschilling/spacetraders/spacetraders_tui/gui -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/backends -I/include/freetype2 -I/usr/include/freetype2 -g -Wall -std=c++20 -o CMakeFiles/imgui_app.dir/app.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/app.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/app.cpp"
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui",
-  "command": "/usr/bin/c++ -DIMGUI_FREETYPE_ENABLE -DIMGUI_IMPL_OPENGL_LOADER_GLFW -I/home/cschilling/spacetraders/spacetraders_tui/gui -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/backends -I/include/freetype2 -I/usr/include/freetype2 -g -Wall -std=c++20 -o CMakeFiles/imgui_app.dir/glfw_opengl_imgui_layer.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/glfw_opengl_imgui_layer.cpp",
+  "command": "/usr/bin/c++ -DIMGUI_FREETYPE_ENABLE -DIMGUI_IMPL_OPENGL_LOADER_GLFW -Dsfml_graphics -I/home/cschilling/spacetraders/spacetraders_tui/gui -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/backends -I/include/freetype2 -I/usr/include/freetype2 -g -Wall -std=c++20 -o CMakeFiles/imgui_app.dir/glfw_opengl_imgui_layer.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/glfw_opengl_imgui_layer.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/glfw_opengl_imgui_layer.cpp"
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui",
-  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -DSPDLOG_COMPILED_LIB -I/home/cschilling/spacetraders/spacetraders_tui/gui -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/backends -I/include/freetype2 -I/usr/include/freetype2 -I/home/cschilling/spacetraders/spacetraders_tui/notcute/include -I/home/cschilling/spacetraders/spacetraders_tui/core/include -I/home/cschilling/spacetraders/spacetraders_tui/spacetraders-sdk/include -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -g -Wall -std=c++20 -o CMakeFiles/sptr.dir/sptr.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/sptr.cpp",
-  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/sptr.cpp"
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -DIMGUI_USER_CONFIG=\\\"imconfig-SFML.h\\\" -DSFML_STATIC -DSPDLOG_COMPILED_LIB -I/home/cschilling/spacetraders/spacetraders_tui/gui -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/backends -I/include/freetype2 -I/usr/include/freetype2 -I/home/cschilling/spacetraders/spacetraders_tui/notcute/include -I/home/cschilling/spacetraders/spacetraders_tui/core/include -I/home/cschilling/spacetraders/spacetraders_tui/spacetraders-sdk/include -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/sptr.dir/sptr_sfml.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/sptr_sfml.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/sptr_sfml.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -DIMGUI_USER_CONFIG=\\\"imconfig-SFML.h\\\" -DSFML_STATIC -DSPDLOG_COMPILED_LIB -I/home/cschilling/spacetraders/spacetraders_tui/gui -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/backends -I/include/freetype2 -I/usr/include/freetype2 -I/home/cschilling/spacetraders/spacetraders_tui/notcute/include -I/home/cschilling/spacetraders/spacetraders_tui/core/include -I/home/cschilling/spacetraders/spacetraders_tui/spacetraders-sdk/include -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/sptr.dir/layers/map.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/layers/map.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/layers/map.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DCPPREST_FORCE_HTTP_CLIENT_ASIO -DCPPREST_FORCE_HTTP_LISTENER_ASIO -DCPPREST_NO_SSL_LEAK_SUPPRESS -DIMGUI_USER_CONFIG=\\\"imconfig-SFML.h\\\" -DSFML_STATIC -DSPDLOG_COMPILED_LIB -I/home/cschilling/spacetraders/spacetraders_tui/gui -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/backends -I/include/freetype2 -I/usr/include/freetype2 -I/home/cschilling/spacetraders/spacetraders_tui/notcute/include -I/home/cschilling/spacetraders/spacetraders_tui/core/include -I/home/cschilling/spacetraders/spacetraders_tui/spacetraders-sdk/include -I/home/cschilling/spacetraders/spacetraders_tui/engine/.. -I/home/cschilling/spacetraders/spacetraders_tui/engine/../entt/single_include -I/usr/include/lua5.2 -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml -isystem /home/cschilling/spacetraders/spacetraders_tui/engine/sol2/include -g -Wall -std=c++20 -o CMakeFiles/sptr.dir/__/imgui_lua_bindings/imgui_lua_bindings.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/imgui_lua_bindings/imgui_lua_bindings.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/imgui_lua_bindings/imgui_lua_bindings.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-system.dir/Clock.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Clock.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Clock.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-system.dir/Err.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Err.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Err.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-system.dir/Sleep.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Sleep.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Sleep.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-system.dir/String.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/String.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/String.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-system.dir/Utils.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Utils.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Utils.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-system.dir/Vector2.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Vector2.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Vector2.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-system.dir/Vector3.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Vector3.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Vector3.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-system.dir/FileInputStream.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/FileInputStream.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/FileInputStream.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/MemoryInputStream.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/MemoryInputStream.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/System",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-system.dir/Unix/SleepImpl.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Unix/SleepImpl.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/System/Unix/SleepImpl.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Clipboard.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Clipboard.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Clipboard.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Context.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Context.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Context.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Cursor.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Cursor.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Cursor.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/GlContext.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/GlContext.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/GlContext.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/GlResource.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/GlResource.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/GlResource.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Joystick.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Joystick.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Joystick.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/JoystickManager.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/JoystickManager.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/JoystickManager.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Keyboard.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Keyboard.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Keyboard.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Mouse.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Mouse.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Mouse.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Touch.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Touch.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Touch.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Sensor.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Sensor.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Sensor.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/SensorManager.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/SensorManager.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/SensorManager.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/VideoMode.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/VideoMode.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/VideoMode.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Vulkan.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Vulkan.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Vulkan.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Window.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Window.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Window.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/WindowBase.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/WindowBase.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/WindowBase.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/WindowImpl.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/WindowImpl.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/WindowImpl.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/CursorImpl.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/CursorImpl.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/CursorImpl.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/ClipboardImpl.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/ClipboardImpl.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/ClipboardImpl.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/InputImpl.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/InputImpl.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/KeyboardImpl.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/KeyboardImpl.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/KeyboardImpl.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/KeySymToKeyMapping.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/KeySymToKeyMapping.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/KeySymToKeyMapping.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/KeySymToUnicodeMapping.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/KeySymToUnicodeMapping.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/KeySymToUnicodeMapping.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/SensorImpl.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/SensorImpl.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/SensorImpl.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/Display.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/Display.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/Display.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/VideoModeImpl.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/VideoModeImpl.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/VideoModeImpl.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/VulkanImplX11.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/VulkanImplX11.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/WindowImplX11.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/WindowImplX11.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/WindowImplX11.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/GlxContext.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/GlxContext.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/GlxContext.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Window",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/vulkan -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-window.dir/Unix/JoystickImpl.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/JoystickImpl.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Window/Unix/JoystickImpl.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-network.dir/Ftp.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/Ftp.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/Ftp.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-network.dir/Http.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/Http.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/Http.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-network.dir/IpAddress.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/IpAddress.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/IpAddress.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-network.dir/Packet.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/Packet.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/Packet.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-network.dir/Socket.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/Socket.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/Socket.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-network.dir/SocketSelector.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/SocketSelector.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/SocketSelector.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-network.dir/TcpListener.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/TcpListener.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/TcpListener.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-network.dir/TcpSocket.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/TcpSocket.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/TcpSocket.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-network.dir/UdpSocket.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/UdpSocket.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/UdpSocket.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Network",
+  "command": "/usr/bin/c++ -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/Unix/SocketImpl.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Network/Unix/SocketImpl.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/BlendMode.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/BlendMode.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/Font.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Font.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Font.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/Glsl.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Glsl.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Glsl.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/GLCheck.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/GLCheck.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/GLExtensions.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/GLExtensions.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -fno-strict-aliasing -o CMakeFiles/sfml-graphics.dir/Image.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Image.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Image.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderStates.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderStates.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderTexture.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderTexture.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderTarget.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderTarget.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderWindow.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderWindow.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/Shader.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Shader.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Shader.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/StencilMode.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/StencilMode.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/StencilMode.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/Texture.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Texture.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Texture.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/TextureSaver.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/TextureSaver.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/Transform.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Transform.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Transform.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/Transformable.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Transformable.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Transformable.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/View.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/View.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/View.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/Shape.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Shape.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Shape.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/CircleShape.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/CircleShape.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RectangleShape.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RectangleShape.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/ConvexShape.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/ConvexShape.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/Sprite.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Sprite.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Sprite.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/Text.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Text.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/Text.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/VertexArray.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/VertexArray.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/VertexBuffer.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/VertexBuffer.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderTextureImplFBO.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderTextureImplFBO.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Graphics",
+  "command": "/usr/bin/c++ -DSFML_STATIC -DSTBI_FAILURE_USERMSG -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/stb_image -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/glad/include -isystem /usr/include/freetype2 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/ALCheck.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/ALCheck.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/ALCheck.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/AlResource.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/AlResource.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/AlResource.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/AudioDevice.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/AudioDevice.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/Listener.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/Listener.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/Listener.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/Music.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/Music.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/Music.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/Sound.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/Sound.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/Sound.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundBuffer.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundBuffer.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundBufferRecorder.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundBufferRecorder.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/InputSoundFile.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/InputSoundFile.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/OutputSoundFile.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/OutputSoundFile.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundRecorder.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundRecorder.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundSource.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundSource.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundSource.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundStream.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundStream.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundStream.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileFactory.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileFactory.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileReaderWav.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileReaderWav.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/SFML/src/SFML/Audio",
+  "command": "/usr/bin/c++ -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src -isystem /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/extlibs/headers/minimp3 -isystem /usr/include/AL -g -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wimplicit-fallthrough -Wsuggest-override -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches -std=c++20 -o CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileWriterWav.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/src/SFML/Audio/SoundFileWriterWav.cpp"
 },
 {
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/imgui-docking",
@@ -1113,5 +1623,40 @@
   "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/imgui-docking",
   "command": "/usr/bin/c++  -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/backends -I/include/freetype2 -I/usr/include/freetype2 -g -Wall -std=c++20 -o CMakeFiles/imgui.dir/backends/imgui_impl_opengl3.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/backends/imgui_impl_opengl3.cpp",
   "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/backends/imgui_impl_opengl3.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/imgui-sfml",
+  "command": "/usr/bin/c++ -DIMGUI_USER_CONFIG=\\\"imconfig-SFML.h\\\" -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -g -Wall -std=c++20 -o CMakeFiles/ImGui-SFML.dir/imgui-SFML.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml/imgui-SFML.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml/imgui-SFML.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/imgui-sfml",
+  "command": "/usr/bin/c++ -DIMGUI_USER_CONFIG=\\\"imconfig-SFML.h\\\" -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -g -Wall -std=c++20 -o CMakeFiles/ImGui-SFML.dir/__/imgui-docking/imgui.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/imgui.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/imgui.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/imgui-sfml",
+  "command": "/usr/bin/c++ -DIMGUI_USER_CONFIG=\\\"imconfig-SFML.h\\\" -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -g -Wall -std=c++20 -o CMakeFiles/ImGui-SFML.dir/__/imgui-docking/imgui_demo.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/imgui_demo.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/imgui_demo.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/imgui-sfml",
+  "command": "/usr/bin/c++ -DIMGUI_USER_CONFIG=\\\"imconfig-SFML.h\\\" -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -g -Wall -std=c++20 -o CMakeFiles/ImGui-SFML.dir/__/imgui-docking/imgui_draw.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/imgui_draw.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/imgui_draw.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/imgui-sfml",
+  "command": "/usr/bin/c++ -DIMGUI_USER_CONFIG=\\\"imconfig-SFML.h\\\" -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -g -Wall -std=c++20 -o CMakeFiles/ImGui-SFML.dir/__/imgui-docking/imgui_tables.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/imgui_tables.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/imgui_tables.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/imgui-sfml",
+  "command": "/usr/bin/c++ -DIMGUI_USER_CONFIG=\\\"imconfig-SFML.h\\\" -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -g -Wall -std=c++20 -o CMakeFiles/ImGui-SFML.dir/__/imgui-docking/imgui_widgets.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/imgui_widgets.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/imgui_widgets.cpp"
+},
+{
+  "directory": "/home/cschilling/spacetraders/spacetraders_tui/build/gui/imgui-sfml",
+  "command": "/usr/bin/c++ -DIMGUI_USER_CONFIG=\\\"imconfig-SFML.h\\\" -DSFML_STATIC -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking -I/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-sfml -I/home/cschilling/spacetraders/spacetraders_tui/gui/SFML/include -g -Wall -std=c++20 -o CMakeFiles/ImGui-SFML.dir/__/imgui-docking/misc/cpp/imgui_stdlib.cpp.o -c /home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/misc/cpp/imgui_stdlib.cpp",
+  "file": "/home/cschilling/spacetraders/spacetraders_tui/gui/imgui-docking/misc/cpp/imgui_stdlib.cpp"
 }
 ]

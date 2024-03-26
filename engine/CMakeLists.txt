@@ -1,6 +1,7 @@
 project(game_engine)
 
-add_subdirectory(sol2)
+add_subdirectory(vendor/sol2)
+add_subdirectory(vendor/entt)
 
 find_package(GLEW REQUIRED)
 find_package(glfw3 REQUIRED)
@@ -42,10 +43,16 @@ set(SOURCES
 find_package(OpenGL REQUIRED)
 
 add_library(game_engine STATIC ${SOURCES})
-target_link_libraries(game_engine PUBLIC GLEW::glew glfw OpenGL::OpenGL sol2::sol2 lua5.2-c++)
+target_link_libraries(game_engine PUBLIC
+    GLEW::glew
+    glfw
+    OpenGL::OpenGL
+    EnTT::EnTT
+    sol2::sol2
+    lua5.2-c++
+)
 target_include_directories(game_engine PUBLIC
     ..
-    ../entt/single_include
     /usr/include/lua5.2
 )
 

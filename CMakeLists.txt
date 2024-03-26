@@ -9,6 +9,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(spacetraders VERSION 0.1)
 
+find_package(spdlog REQUIRED)
+
 if(WIN32 AND NOT MSVC)
     add_compile_options(-Wall -fuse-ld=lld)
 elseif(UNIX)
@@ -17,22 +19,20 @@ endif()
 
 #TODO fix this properly by adding an install to BSI libraries
 
-add_subdirectory(entt)
-add_subdirectory(spacetraders-sdk)
-add_subdirectory(glm)
+add_subdirectory(vendor/glm)
+add_subdirectory(spacetraders-sdk/libcpp)
 add_subdirectory(engine)
 add_subdirectory(core)
-add_subdirectory(notcute)
+add_subdirectory(tui)
 add_subdirectory(gui)
 
-# set(SOURCES
-#     main.cpp
-# )
+set(SOURCES
+    main.cpp
+)
 
-find_package(spdlog REQUIRED)
 
 # add_executable(spacetraders ${SOURCES})
 # target_link_libraries(spacetraders PRIVATE notcute CppRestOpenAPIClient spdlog::spdlog sptr_core)
 # target_link_directories(spacetraders PRIVATE /usr/local/lib)
-#
+
 configure_file("users.ini" "${CMAKE_BINARY_DIR}")
