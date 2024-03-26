@@ -8,7 +8,8 @@ find_package(glfw3 REQUIRED)
 add_subdirectory(vendor/imgui-docking)
 add_subdirectory(vendor/SFML)
 
-set(IMGUI_DIR vendor/imgui-docking)
+set(IMGUI_DIR ${CMAKE_CURRENT_SOURCE_DIR}/vendor/imgui-docking)
+message("IMGUI_DIR="${IMGUI_DIR})
 add_subdirectory(vendor/imgui-sfml)
 
 
@@ -50,7 +51,7 @@ target_link_libraries(sptr PRIVATE imgui_app notcute sptr_core game_engine sfml-
 
 # file(COPY ${RESOURCES_DIR}/fonts DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/resources)
 file(COPY scripts DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-file(COPY ../spacetraders-sdk/liblua DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ../spacetraders-sdk/liblua/openapiclient DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 install(IMPORTED_RUNTIME_ARTIFACTS sptr
         RUNTIME_DEPENDENCY_SET sptr

@@ -16,13 +16,11 @@ void set_user(const User& user) {
     new_config->setApiKey("", user.token);
     new_config->getDefaultHeaders()["Authorization"] = "Bearer " + user.token;
     get_api_client()->setConfiguration(new_config);
-    get_api_client()->setResponseHandler(
-        [](web::http::status_code code, const web::http::http_headers&) {
-            if (code != 200) {
-                notcute::log_debug("Http Response not 200: {}",
-                                   std::to_string(code));
-            }
-        });
+    get_api_client()->setResponseHandler([](web::http::status_code code, const web::http::http_headers&) {
+        if (code != 200) {
+            std::cout << "Http Response not 200: " << std::to_string(code) << "\n";
+        }
+    });
 }
 
 const User& get_user() {

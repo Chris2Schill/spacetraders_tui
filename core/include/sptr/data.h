@@ -3,6 +3,7 @@
 #include <entt/entt.hpp>
 #include <thread>
 #include <variant>
+#include <iostream>
 #include <vector>
 
 #include <CppRestOpenAPIClient/api/AgentsApi.h>
@@ -26,11 +27,11 @@
 #define API_ERROR_GUARD_END                                                                                            \
     }                                                                                                                  \
     catch (const api::ApiException& ex) {                                                                              \
-        notcute::log_debug("{}", ex.what());                                                                           \
+        std::cerr << ex.what() << "\n";                                                                                \
         sptr::event_bus::Dispatcher::getInstance().post(sptr::event::LogEvent{ex.what()});                             \
         auto ss = std::dynamic_pointer_cast<std::stringstream>(ex.getContent());                                       \
         if (nullptr != ss) {                                                                                           \
-            notcute::log_debug("{}", ss->str());                                                                       \
+        std::cerr << ss->str() << "\n";                                                                                \
             sptr::event_bus::Dispatcher::getInstance().post(sptr::event::LogEvent{ss->str()});                         \
         }                                                                                                              \
     }

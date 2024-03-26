@@ -74,7 +74,10 @@ int main() {
     scene = create_ref<Scene>();
 
     Entity imwin1 = scene->createBasicEntity("ImGuiWindow1");
-    imwin1.addComponent<ScriptComponent>("system.lua");
+    imwin1.addComponent<ScriptComponent>("agent.lua");
+
+    Entity imwin2 = scene->createBasicEntity("ImGuiWindow");
+    imwin2.addComponent<ScriptComponent>("ships.lua");
     // imwin1.addComponent<ScriptComponent>("imgui.lua");
     // imwin1.addComponent<ImGuiRenderComponent>(create_ref<MainDockspaceLayer>());
 

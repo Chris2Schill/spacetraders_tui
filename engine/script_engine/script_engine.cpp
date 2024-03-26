@@ -124,7 +124,7 @@ void ScriptEngine::on_update_entity(Entity entity, double dt) {
 Scene* ScriptEngine::get_scene() { return s_Data->scene; }
 
 void ScriptEngine::load_entity_classes() {
-    std::ranges::for_each(std::filesystem::directory_iterator{"scripts"}, [](const auto& dir_entry) {
+    std::ranges::for_each(std::filesystem::directory_iterator{"/home/cschilling/spacetraders_tui/gui/scripts"}, [](const auto& dir_entry) {
         if (dir_entry.is_regular_file() && dir_entry.path().extension() == ".lua") {
             std::cout << "loading " << dir_entry.path() << "\n";
             // std::ifstream fs(dir_entry.path());

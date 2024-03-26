@@ -23,7 +23,7 @@ add_subdirectory(vendor/glm)
 add_subdirectory(spacetraders-sdk/libcpp)
 add_subdirectory(engine)
 add_subdirectory(core)
-add_subdirectory(tui)
+# add_subdirectory(tui)
 add_subdirectory(gui)
 
 set(SOURCES

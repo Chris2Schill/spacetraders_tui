@@ -50,10 +50,15 @@ target_link_libraries(game_engine PUBLIC
     EnTT::EnTT
     sol2::sol2
     lua5.2-c++
+    crypto
+    ssl
 )
 target_include_directories(game_engine PUBLIC
     ..
+    ..vendor/glm
     /usr/include/lua5.2
+    ${CMAKE_SOURCE_DIR}/vendor
+    ${CMAKE_SOURCE_DIR}/gui/vendor/imgui-docking
 )
 
 # target_include_directories(embedlua PRIVATE /usr/include/lua5.1)
