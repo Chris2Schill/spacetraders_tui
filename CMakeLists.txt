@@ -20,9 +20,9 @@ endif()
 #TODO fix this properly by adding an install to BSI libraries
 
 add_subdirectory(vendor/glm)
-add_subdirectory(spacetraders-sdk/libcpp)
+# add_subdirectory(spacetraders-sdk/libcpp)
 add_subdirectory(engine)
-add_subdirectory(core)
+# add_subdirectory(core)
 # add_subdirectory(tui)
 add_subdirectory(gui)
 

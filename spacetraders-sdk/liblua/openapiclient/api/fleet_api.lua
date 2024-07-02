@@ -103,6 +103,7 @@ function fleet_api:create_chart(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -149,6 +150,7 @@ function fleet_api:create_ship_ship_scan(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -195,6 +197,7 @@ function fleet_api:create_ship_system_scan(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -241,6 +244,7 @@ function fleet_api:create_ship_waypoint_scan(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -287,6 +291,7 @@ function fleet_api:create_survey(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -333,6 +338,7 @@ function fleet_api:dock_ship(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -383,6 +389,7 @@ function fleet_api:extract_resources(ship_symbol, extract_resources_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(extract_resources_request))
 
@@ -435,6 +442,7 @@ function fleet_api:extract_resources_with_survey(ship_symbol, survey)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(survey))
 
@@ -483,6 +491,7 @@ function fleet_api:get_mounts(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -529,6 +538,7 @@ function fleet_api:get_my_ship(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -575,6 +585,7 @@ function fleet_api:get_my_ship_cargo(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -668,6 +679,7 @@ function fleet_api:get_repair_ship(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -714,6 +726,7 @@ function fleet_api:get_scrap_ship(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -760,6 +773,7 @@ function fleet_api:get_ship_cooldown(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -806,6 +820,7 @@ function fleet_api:get_ship_nav(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -856,6 +871,7 @@ function fleet_api:install_mount(ship_symbol, install_mount_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(install_mount_request))
 
@@ -908,6 +924,7 @@ function fleet_api:jettison(ship_symbol, jettison_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(jettison_request))
 
@@ -960,6 +977,7 @@ function fleet_api:jump_ship(ship_symbol, jump_ship_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(jump_ship_request))
 
@@ -1012,6 +1030,7 @@ function fleet_api:navigate_ship(ship_symbol, navigate_ship_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(navigate_ship_request))
 
@@ -1060,6 +1079,7 @@ function fleet_api:negotiate_contract(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -1106,6 +1126,7 @@ function fleet_api:orbit_ship(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -1156,6 +1177,7 @@ function fleet_api:patch_ship_nav(ship_symbol, patch_ship_nav_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(patch_ship_nav_request))
 
@@ -1208,6 +1230,7 @@ function fleet_api:purchase_cargo(ship_symbol, purchase_cargo_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(purchase_cargo_request))
 
@@ -1260,6 +1283,7 @@ function fleet_api:purchase_ship(purchase_ship_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(purchase_ship_request))
 
@@ -1312,6 +1336,7 @@ function fleet_api:refuel_ship(ship_symbol, refuel_ship_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(refuel_ship_request))
 
@@ -1364,6 +1389,7 @@ function fleet_api:remove_mount(ship_symbol, remove_mount_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(remove_mount_request))
 
@@ -1412,6 +1438,7 @@ function fleet_api:repair_ship(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -1458,6 +1485,7 @@ function fleet_api:scrap_ship(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -1508,6 +1536,7 @@ function fleet_api:sell_cargo(ship_symbol, sell_cargo_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(sell_cargo_request))
 
@@ -1560,6 +1589,7 @@ function fleet_api:ship_refine(ship_symbol, ship_refine_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(ship_refine_request))
 
@@ -1608,6 +1638,7 @@ function fleet_api:siphon_resources(ship_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -1658,6 +1689,7 @@ function fleet_api:transfer_cargo(ship_symbol, transfer_cargo_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(transfer_cargo_request))
 
@@ -1710,6 +1742,7 @@ function fleet_api:warp_ship(ship_symbol, navigate_ship_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(navigate_ship_request))
 

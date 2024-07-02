@@ -69,6 +69,7 @@ function systems_api:get_construction(system_symbol, waypoint_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -115,6 +116,7 @@ function systems_api:get_jump_gate(system_symbol, waypoint_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -161,6 +163,7 @@ function systems_api:get_market(system_symbol, waypoint_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -207,6 +210,7 @@ function systems_api:get_shipyard(system_symbol, waypoint_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -253,6 +257,7 @@ function systems_api:get_system(system_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -286,12 +291,23 @@ function systems_api:get_system(system_symbol)
 end
 
 function systems_api:get_system_waypoints(system_symbol, page, limit, type, traits)
+
+    local path = string.format("%s/systems/%s/waypoints?page=%s&limit=%s", --&type=%s&traits=%s",
+        self.basePath, system_symbol, http_util.encodeURIComponent(page), http_util.encodeURIComponent(limit))
+
+    if type ~= nil then
+        path = path..string.format("&type=%s", http_util.encodeURIComponent(type))
+    end
+
+    if traits ~= nil then
+        path = path..string.format("&traits=%s", http_util.encodeURIComponent(traits))
+    end
+
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/systems/%s/waypoints?page=%s&limit=%s&type=%s&traits=%s",
-			self.basePath, system_symbol, http_util.encodeURIComponent(page), http_util.encodeURIComponent(limit), http_util.encodeURIComponent(type), http_util.encodeURIComponent(traits));
+        path = path;
 	})
 
 	-- set HTTP verb
@@ -299,6 +315,7 @@ function systems_api:get_system_waypoints(system_symbol, page, limit, type, trai
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -345,6 +362,7 @@ function systems_api:get_systems(page, limit)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -391,6 +409,7 @@ function systems_api:get_waypoint(system_symbol, waypoint_symbol)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -441,6 +460,7 @@ function systems_api:supply_construction(system_symbol, waypoint_symbol, supply_
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(supply_construction_request))
 

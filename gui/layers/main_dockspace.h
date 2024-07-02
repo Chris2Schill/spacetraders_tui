@@ -35,8 +35,8 @@ struct MainDockspaceLayer : public Layer {
     }
 
     void on_user_selected(const sptr::event::UserSelected& e) {
-        ui_game = std::make_shared<UIGame>();
         sptr::GameState::instance().set_active_user(e.user);
+        ui_game = std::make_shared<UIGame>();
         ui = ui_game;
     }
 

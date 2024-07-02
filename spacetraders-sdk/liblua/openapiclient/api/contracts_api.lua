@@ -63,6 +63,7 @@ function contracts_api:accept_contract(contract_id)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -113,6 +114,7 @@ function contracts_api:deliver_contract(contract_id, deliver_contract_request)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 	req:set_body(dkjson.encode(deliver_contract_request))
 
@@ -161,6 +163,7 @@ function contracts_api:fulfill_contract(contract_id)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -207,6 +210,7 @@ function contracts_api:get_contract(contract_id)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call
@@ -253,6 +257,7 @@ function contracts_api:get_contracts(page, limit)
 	-- TODO: create a function to select proper content-type
 	--local var_accept = { "application/json" }
 	req.headers:upsert("content-type", "application/json")
+    add_authoriation_header(req.headers)
 
 
 	-- make the HTTP call

@@ -1,4 +1,6 @@
 #include "SFML/Window/ContextSettings.hpp"
+#include "SFML/Window/Cursor.hpp"
+#include "engine/scene/components.h"
 #include "imgui-SFML.h"
 #include "imgui.h"
 
@@ -9,8 +11,10 @@
 #include <SFML/System/Clock.hpp>
 #include <SFML/Window/Event.hpp>
 
+#include "engine/core/log.h"
 #include "engine/script_engine/script_engine.h"
-#include "layers/main_dockspace.h"
+#include "engine/input/input_system.h"
+// #include "layers/main_dockspace.h"
 #include "lua.h"
 
 sf::RenderWindow* gRenderWindow = nullptr;
@@ -48,19 +52,12 @@ int main() {
     // io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
     // io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;         // Enable Docking
     // io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;       // Enable Multi-Viewport / Platform Windows
-    sf::ContextSettings settings;
-    settings.majorVersion = 4;
-    settings.minorVersion = 4;
-    settings.antialiasingLevel = 8;
+    Log::Init();
 
-    sf::RenderWindow window(sf::VideoMode({1400, 700}), "SpaceTraders", sf::Style::Default, sf::State::Windowed,
-                            settings);
-    window.setPosition({0, 0});
-    window.setFramerateLimit(60);
-    auto ret = ImGui::SFML::Init(window);
-    if (!ret) {
-        std::cerr << "Error Initializing SFML\n";
-    }
+    ScriptEngine::init();
+    ScriptEngine::safe_script_file_global("../../gui/scripts/globals.lua");
+
+    scene = create_ref<Scene>();
 
     ImGuiStyle& style = ImGui::GetStyle();
     style.WindowPadding = ImVec2(3, 3);
@@ -71,48 +68,72 @@ int main() {
     style.ScrollbarRounding = 12;
     style.TabRounding = 4;
 
-    scene = create_ref<Scene>();
+    auto addScriptEntity = [](std::string name, std::string script) {
+        Entity ent = scene->createBasicEntity(name);
+        ent.addComponent<ScriptComponent>(script);
+        return ent;
+    };
 
-    Entity imwin1 = scene->createBasicEntity("ImGuiWindow1");
-    imwin1.addComponent<ScriptComponent>("agent.lua");
+    Entity primaryCamera = scene->createEntity("PrimaryCamera");
+    primaryCamera.addComponent<CameraComponent>();
+    primaryCamera.addComponent<ScriptComponent>("primary_camera.lua");
 
-    Entity imwin2 = scene->createBasicEntity("ImGuiWindow");
-    imwin2.addComponent<ScriptComponent>("ships.lua");
-    // imwin1.addComponent<ScriptComponent>("imgui.lua");
-    // imwin1.addComponent<ImGuiRenderComponent>(create_ref<MainDockspaceLayer>());
+    // Entity skybox = scene->createEntity("Skybox");
+    // skybox.addComponent<ScriptComponent>("skybox.lua");
+    // skybox.addComponent<SpriteComponent>("space.jpg");
+    // PriorityComponent& skybox_pc = skybox.getComponent<PriorityComponent>();
+    // skybox_pc.priority = 2;
 
-    ScriptEngine::init();
+    addScriptEntity("AgentsData",  "data/agent.lua");
+    addScriptEntity("SystemsData", "data/systems.lua");
+    addScriptEntity("ShipsData", "data/ships.lua");
+    addScriptEntity("WaypointsData", "data/waypoints.lua");
+    addScriptEntity("ContractsData", "data/contracts.lua");
+
+    Entity ui = addScriptEntity("UI", "ui/ui.lua");
+    PriorityComponent& pc = ui.getComponent<PriorityComponent>();
+    pc.priority = 1;
+
+    addScriptEntity("AgentWindow",     "ui/agent.lua");
+    addScriptEntity("SystemsWindow",   "ui/systems.lua");
+    addScriptEntity("SystemWindow",    "ui/system.lua");
+    addScriptEntity("ShipsWindow",     "ui/ships.lua");
+    addScriptEntity("WaypointsWindow", "ui/waypoints.lua");
+    addScriptEntity("ContractsWindow", "ui/contracts.lua");
+
 
     scene->startRuntime();
 
-    sf::Clock deltaClock;
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            ImGui::SFML::ProcessEvent(window, event);
-
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
-        }
-        double dt = deltaClock.getElapsedTime().asSeconds();
-
-        ImGui::SFML::Update(window, deltaClock.restart());
-        display(window);
-        try {
-            scene->onUpdateRuntime(dt);
-            scene->onUpdateSimulation(dt);
-
-        } catch (const std::exception& e) {
-            std::cerr << "Exception thrown in lua: " << e.what();
-        }
-        ImGui::SFML::Render(window);
-        window.display();
+    while (scene->isRunning()) {
+        double dt = scene->deltaTime();
+        scene->step(dt);
+        InputSystem::on_runtime_update(&(*scene));
+        scene->renderScene(primaryCamera);
     }
 
     scene->stopRuntime();
 
-    ScriptEngine::shutdown();
+    scene = nullptr;
 
-    ImGui::SFML::Shutdown();
+    ScriptEngine::shutdown();
 }
+
+// struct position {
+//     float x, y;
+// };
+// int main() {
+//     entt::registry registry;
+//
+//     for(auto i = 0u; i < 100u; ++i) {
+//         const auto entity = registry.create();
+//         // registry.emplace<position>(entity, position());
+//         registry.emplace<TransformComponent>(entity, TransformComponent());
+//         // if(i % 2 == 0) { registry.emplace<velocity>(entity, i * .1f, i * .1f); }
+//     }
+//
+//     // registry.sort<position>([](const auto& lhs, const auto& rhs){ return lhs.x < rhs.x; });
+//     // registry.sort<TransformComponent>([](const auto& lhs, const auto& rhs){ return true; });
+//     registry.sort<TransformComponent>(
+//         [](const TransformComponent& lhs, const TransformComponent& rhs) { return lhs.translation.z > rhs.translation.z; });
+//
+// }

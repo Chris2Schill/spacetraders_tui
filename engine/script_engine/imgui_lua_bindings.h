@@ -1502,7 +1502,8 @@ namespace sol_ImGui
 	inline void DockSpace(unsigned int id)																{ ImGui::DockSpace(id); }
 	inline void DockSpace(unsigned int id, float sizeX, float sizeY)									{ ImGui::DockSpace(id, { sizeX, sizeY }); }
 	inline void DockSpace(unsigned int id, float sizeX, float sizeY, int flags)							{ ImGui::DockSpace(id, { sizeX, sizeY }, static_cast<ImGuiDockNodeFlags>(flags)); }
-	inline unsigned int DockSpaceOverViewport()															{ /*TODO: support any viewport*/ return ImGui::DockSpaceOverViewport(ImGui::GetMainViewport()); /* TODO: DockSpaceOverViwport(...) ==> UNSUPPORTED */ }
+	inline unsigned int DockSpaceOverViewport(int flags)											    { /*TODO: support any viewport*/ return ImGui::DockSpaceOverViewport(ImGui::GetMainViewport(),  flags); /* TODO: DockSpaceOverViwport(...) ==> UNSUPPORTED */ }
+    inline unsigned int DockSpaceOverViewport()											                { return DockSpaceOverViewport(0); }
 	inline void SetNextWindowDockID(unsigned int dock_id)												{ ImGui::SetNextWindowDockID(dock_id); }
 	inline void SetNextWindowDockID(unsigned int dock_id, int cond)										{ ImGui::SetNextWindowDockID(dock_id, static_cast<ImGuiCond>(cond)); }
 	inline void SetNextWindowClass()																	{  /* TODO: SetNextWindowClass(...) ==> UNSUPPORTED */ }
@@ -1987,8 +1988,7 @@ namespace sol_ImGui
 			"NoDockingInCentralNode"		, ImGuiDockNodeFlags_NoDockingInCentralNode,
 			"PassthruCentralNode"			, ImGuiDockNodeFlags_PassthruCentralNode,
 			"NoSplit"						, ImGuiDockNodeFlags_NoSplit,
-			"NoResize"						, ImGuiDockNodeFlags_NoResize,
-			"AutoHideTabBar"				, ImGuiDockNodeFlags_AutoHideTabBar
+			"NoResize"						, ImGuiDockNodeFlags_NoResize, "AutoHideTabBar"				, ImGuiDockNodeFlags_AutoHideTabBar
 		);
 #pragma endregion DockNode Flags
 
@@ -2515,6 +2515,7 @@ namespace sol_ImGui
 																sol::resolve<bool(const std::string&, int)>(TreeNodeEx),
 																sol::resolve<bool(const std::string&, int, const std::string&)>(TreeNodeEx)
 															));
+		ImGui.set_function("TreePop"						, TreePop);
 		ImGui.set_function("TreePush"						, TreePush);
 		ImGui.set_function("GetTreeNodeToLabelSpacing"		, GetTreeNodeToLabelSpacing);
 		ImGui.set_function("CollapsingHeader"				, sol::overload(
@@ -2670,7 +2671,10 @@ namespace sol_ImGui
 																sol::resolve<void(unsigned int, float, float)>(DockSpace),
 																sol::resolve<void(unsigned int, float, float, int)>(DockSpace)
 															));
-        ImGui.set_function("DockSpaceOverViewport"          , DockSpaceOverViewport);
+        ImGui.set_function("DockSpaceOverViewport"          , sol::overload(
+																sol::resolve<unsigned int()>(DockSpaceOverViewport),
+																sol::resolve<unsigned int(int)>(DockSpaceOverViewport)
+                                                            ));
 		ImGui.set_function("SetNextWindowDockID"			, sol::overload(
 																sol::resolve<void(unsigned int)>(SetNextWindowDockID),
 																sol::resolve<void(unsigned int, int)>(SetNextWindowDockID)

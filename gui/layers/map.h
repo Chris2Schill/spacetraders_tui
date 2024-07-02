@@ -1,9 +1,9 @@
 #pragma once
 
-#include "engine/scene/components.h"
-#include "layer.h"
+#include <engine/scene/components.h>
+#include <engine/app/layer.h>
 
-#include "coordinate_conversions.h"
+#include "../coordinate_conversions.h"
 #include "sptr/data.h"
 #include <SFML/Graphics/CircleShape.hpp>
 #include <SFML/Graphics/Font.hpp>

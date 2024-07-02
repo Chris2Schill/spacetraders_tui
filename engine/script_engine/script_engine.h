@@ -1,18 +1,11 @@
 #pragma once
 
 #include <engine/core/base.h>
-
-#define SOL_EXCEPTIONS_SAFE_PROPAGATION 1
-
-#include <sol/forward.hpp>
-#include <sol/sol.hpp>
 #include <engine/scene/entity.h>
 
-// class LuaScript
-// {
-//     Ref<sol::protected_function> on_start;
-//     Ref<sol::protected_function> on_update;
-// };
+#define SOL_EXCEPTIONS_SAFE_PROPAGATION 1
+#include <sol/forward.hpp>
+#include <sol/sol.hpp>
 
 class ScriptEngine {
 public:
@@ -22,10 +15,16 @@ public:
     static void on_runtime_stop(Scene* scene);
 
     static void shutdown();
-    static void on_create_entity(Entity e);
+    static void on_init_entity(Entity e);
+    static void on_start_entity(Entity e);
     static void on_update_entity(Entity e, double dt);
+    static void on_stop_entity(Entity e);
+    static void on_destroy_entity(Entity e);
+    static void on_hover_entity(Entity e, bool hovered);
+    static void update_dispatcher();
     static Scene* get_scene();
 
-    static void load_entity_classes();
-    static bool class_exists(const std::string& class_name);
+    static void load_entity_classes(const std::string& dir);
+
+    static void safe_script_file_global(const std::string& script_file);
 };

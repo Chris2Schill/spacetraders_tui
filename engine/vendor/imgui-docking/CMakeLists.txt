@@ -19,6 +19,7 @@ target_include_directories(imgui PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/backends
     $ENV{MINGW64_ROOT}/include/freetype2
     /usr/include/freetype2
+    ${CMAKE_SOURCE_DIR}
 )
 
 file(GLOB HEADERS *.h backends/*.h)

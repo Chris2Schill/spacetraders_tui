@@ -17,7 +17,13 @@
 //---- Define assertion handler. Defaults to calling assert().
 // If your macro uses multiple statements, make sure is enclosed in a 'do { .. } while (0)' block so it can be used as a single statement.
 //#define IM_ASSERT(_EXPR)  MyAssert(_EXPR)
-//#define IM_ASSERT(_EXPR)  ((void)(_EXPR))     // Disable asserts
+// #define IM_ASSERT(_EXPR)  ((void)(_EXPR))     // Disable asserts
+// #include <engine/core/base.h>
+
+// #include <engine/core/assert.h>
+
+void AssertLog(const char* str, const char* file, int line, bool cond);
+#define IM_ASSERT(_EXPR) AssertLog(#_EXPR, __FILE__, __LINE__, _EXPR)
 
 //---- Define attributes of all API symbols declarations, e.g. for DLL under Windows
 // Using Dear ImGui via a shared library is not recommended, because of function call overhead and because we don't guarantee backward nor forward ABI compatibility.

@@ -1,13 +1,34 @@
 project(game_engine)
 
+
+
+find_package(OpenGL REQUIRED)
+find_package(glfw3 REQUIRED)
+find_package(GLEW REQUIRED)
+
 add_subdirectory(vendor/sol2)
 add_subdirectory(vendor/entt)
+add_subdirectory(vendor/imgui-docking)
+add_subdirectory(vendor/SFML)
 
-find_package(GLEW REQUIRED)
-find_package(glfw3 REQUIRED)
+set(IMGUI_DIR ${CMAKE_CURRENT_SOURCE_DIR}/vendor/imgui-docking)
+message("IMGUI_DIR="${IMGUI_DIR})
+add_subdirectory(vendor/imgui-sfml)
+
+
+set(SOURCES
+    app/app.cpp
+    app/glfw_opengl_imgui_layer.cpp
+)
+
+add_library(imgui_app STATIC ${SOURCES})
+target_compile_definitions(imgui_app PRIVATE -DIMGUI_IMPL_OPENGL_LOADER_GLFW -DIMGUI_FREETYPE_ENABLE sfml_graphics fPic)
+target_link_libraries(imgui_app PUBLIC imgui glfw OpenGL::GL util)
+target_include_directories(imgui_app PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/vendor ${CMAKE_CURRENT_SOURCE_DIR})
 
 set(SOURCES
     core/uuid.cpp
+    core/log.cpp
     # renderer/renderer.cpp
     # # renderer/renderer2d.cpp
     # renderer/index_buffer.cpp
@@ -38,9 +59,12 @@ set(SOURCES
     input/mouse.cpp
     input/filesystem.cpp
     input/keyboard.cpp
+    input/input_system.cpp
 )
 
 find_package(OpenGL REQUIRED)
+
+set(LUA_VERSION lua5.3)
 
 add_library(game_engine STATIC ${SOURCES})
 target_link_libraries(game_engine PUBLIC
@@ -49,16 +73,19 @@ target_link_libraries(game_engine PUBLIC
     OpenGL::OpenGL
     EnTT::EnTT
     sol2::sol2
-    lua5.2-c++
+    ${LUA_VERSION}-c++
     crypto
     ssl
+    imgui_app
+    ImGui-SFML::ImGui-SFML
 )
 target_include_directories(game_engine PUBLIC
     ..
     ..vendor/glm
-    /usr/include/lua5.2
+    /usr/include/${LUA_VERSION}
     ${CMAKE_SOURCE_DIR}/vendor
     ${CMAKE_SOURCE_DIR}/gui/vendor/imgui-docking
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 # target_include_directories(embedlua PRIVATE /usr/include/lua5.1)
